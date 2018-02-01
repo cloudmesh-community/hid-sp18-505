@@ -1,0 +1,41 @@
+http://stateless.co/hal_specification.html
+http://blog.stateless.co/post/13296666138/json-linking-with-hal
+
+mongo --host 127.0.0.1:27017
+
+curl -H "Content-Type: application/json" -X POST -d '{"firstname":"Albert","lastname":"Zweistein", "school":"ISE","university":"IndianaUniversity", "email":"albert@iu.edu"}' http://127.0.0.1:5000/student/
+
+curl -H "Content-Type: application/json" -X POST \
+-d '{"firstname":"Albert","lastname":"Zweistein", \
+"school":"ISE","university":"IndianaUniversity", \
+"email":"albert@iu.edu"}' http://127.0.0.1:5000/student/
+
+version: '2'
+services:
+  rr_db:
+    build:
+      context: .
+      dockerfile: Dockerfile.mysql
+    image:
+      rr_db
+    env_file: ./.env
+    volumes:
+      - ./mysql/schema:/docker-entrypoint-initdb.d
+      - ./mysql/conf.d:/etc/mysql/conf.d
+    ports:
+      - 3306:3306
+  rr_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file: ./.env
+    depends_on:
+      - rr_db
+    image: rr_app
+    volumes:
+      - ./..:/opt/report-runner
+    command: /bin/bash
+    stdin_open: true
+    tty: true
+    links:
+      - rr_db
