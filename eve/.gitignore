@@ -1,0 +1,6 @@
+*.pyc
+*.log
+*.bak
+.env
+
+.docker/mongodb/data/*
