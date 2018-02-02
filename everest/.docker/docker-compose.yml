@@ -6,27 +6,26 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.mongodb
-    image: bdapidb
-    
+    image: mongodb
     ports:
       - 27017:27017
     volumes:
       - ./mongodb/data/db:/data/db
-  python:
-    env_file: ./.env
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: evepython
-    depends_on: 
-      - mongodb
-    ports:
-      - 5000:5000
-      - 8000:8000
-    volumes:
-      - ./..:/opt/eve
-    command: /bin/bash
-    stdin_open: true
-    tty: true
-    links:
-      - mongodb
+  # everest:
+  #   env_file: ./.env
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #   image: everest
+  #   depends_on: 
+  #     - mongodb
+  #   ports:
+  #     - 5000:5000
+  #     - 8000:8000
+  #   volumes:
+  #     - ./..:/opt/everest
+  #   command: /bin/bash
+  #   stdin_open: true
+  #   tty: true
+  #   links:
+  #     - mongodb

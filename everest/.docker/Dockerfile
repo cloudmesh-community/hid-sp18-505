@@ -7,4 +7,6 @@ RUN apt-get update --fix-missing -y
 RUN apt-get upgrade -y
 RUN apt-get install -y psmisc mongodb-clients
 
-WORKDIR /opt/eve
+WORKDIR /opt/everest
+
+CMD [ "bash" ]
