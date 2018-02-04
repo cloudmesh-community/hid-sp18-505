@@ -15,6 +15,9 @@ Spring 2018
 * 2018/01/30 Accessed class github repo, forked my workspace and cloned it locally.
 * 2018/01/31 Online Zoom class meeting.
 * 2018/02/01 Added functionality to REST service.
+* 2018/03/01 Did not do much today.  Just renamed my first rest project as per request by instructor.  Also, I forgot to call my Mom.  But, I will call her tomorrow.
+
+## Todos
 
 ### Scratch Notes and Reminders
  - Left off on p. 80 in handbook.  
