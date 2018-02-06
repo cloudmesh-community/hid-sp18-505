@@ -1,11 +1,23 @@
 version: '3'
 services:
+  swagger_mongo_db:
+    env_file: ./.env
+    build:
+      context: .
+      dockerfile: Dockerfile.mongodb
+    image: swagger_mongo_db
+    ports:
+      - 27017:27017
+    volumes:
+      - ./mongodb/data/db:/data/db
   swagger_app:
     env_file: ./.env
     build:
       context: .
       dockerfile: Dockerfile
     image: app
+    depends_on:
+      - swagger_mongo_db
     ports:
       - 5000:5000
       - 8000:8000
@@ -15,3 +27,5 @@ services:
     command: /bin/bash
     stdin_open: true
     tty: true
+    links:
+      - swagger_mongo_db
