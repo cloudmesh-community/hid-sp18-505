@@ -1,0 +1,4 @@
+*.pyc
+*.bak
+
+swagger/.docker/mongodb/data

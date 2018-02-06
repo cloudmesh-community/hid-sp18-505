@@ -1,4 +1,0 @@
-*.pyc
-*.bak
-
-.docker/mongodb/data
