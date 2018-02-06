@@ -20,6 +20,8 @@ Spring 2018
 ## Week 4 Notes
 * 2018/02/04 Re-wrote base rest app/api to have a more efficient "performance" end-point.  
 * 2018/02/04 Drank beer and had chips before Super Bowl LII.  
+* 2018/02/05 Started work on swagger project.  Created docker-compose.yml, Dockerfile, and Dockerfile.mongodb as part of project's development environment.  
+* 2018/02/06 More work on swagger project.  Continued docker setup this mornging.  
 
 ## Todos
 
