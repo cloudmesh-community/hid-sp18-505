@@ -1,23 +1,24 @@
 version: '3'
 services:
-  swagger_mongo_db:
+  swaggerpgdb:
     env_file: ./.env
     build:
       context: .
-      dockerfile: Dockerfile.mongodb
-    image: swagger_mongo_db
+      dockerfile: Dockerfile.postgresql
+    image: swaggerpgdb
     ports:
-      - 27017:27017
-    volumes:
-      - ./mongodb/data/db:/data/db
-  swagger_app:
+      - 5432:5432
+    volumes: 
+      - ./pgsql/data:/var/lib/postgresql/data
+
+  swaggerapp:
     env_file: ./.env
     build:
       context: .
       dockerfile: Dockerfile
-    image: app
+    image: swaggerapp
     depends_on:
-      - swagger_mongo_db
+      - swaggerpgdb
     ports:
       - 5000:5000
       - 8000:8000
@@ -28,4 +29,4 @@ services:
     stdin_open: true
     tty: true
     links:
-      - swagger_mongo_db
+      - swaggerpgdb
