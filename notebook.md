@@ -22,6 +22,10 @@ Spring 2018
 * 2018/02/04 Drank beer and had chips before Super Bowl LII.  
 * 2018/02/05 Started work on swagger project.  Created docker-compose.yml, Dockerfile, and Dockerfile.mongodb as part of project's development environment.  
 * 2018/02/06 More work on swagger project.  Continued docker setup this mornging.  
+* 2018/02/09 I was planning on doing substantially more work on this project on this day, but glitches in another class distracted me away from dedicating more work to here.
+
+## Week 5 Notes
+* 2018/02/12 Over the previous weekend I decided to do some slight restructuring of the project.  I am building the backend and a good portion of the frontend using Django and the [Django web development](https://www.djangoproject.com/) framework, the [Django REST Framework](http://www.django-rest-framework.org/) plugin, and the [Django Swagger UI](https://marcgibbons.com/django-rest-swagger/) plugin to develop the project.  Django and the plugins are excellent for this kind of project and my thinking is why reinvent the wheel.
 
 ## Todos
 
