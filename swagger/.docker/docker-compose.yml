@@ -11,22 +11,22 @@ services:
     volumes: 
       - ./pgsql/data:/var/lib/postgresql/data
 
-  swaggerapp:
-    env_file: ./.env
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: swaggerapp
-    depends_on:
-      - swaggerpgdb
-    ports:
-      - 5000:5000
-      - 8000:8000
-      - 8080:8080
-    volumes:
-      - ./..:/opt/app
-    command: /bin/bash
-    stdin_open: true
-    tty: true
-    links:
-      - swaggerpgdb
+  # swaggerapp:
+  #   env_file: ./.env
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #   image: swaggerapp
+  #   depends_on:
+  #     - swaggerpgdb
+  #   ports:
+  #     - 5000:5000
+  #     - 8000:8000
+  #     - 8080:8080
+  #   volumes:
+  #     - ./..:/opt/app
+  #   command: /bin/bash
+  #   stdin_open: true
+  #   tty: true
+  #   links:
+  #     - swaggerpgdb

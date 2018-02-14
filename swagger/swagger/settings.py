@@ -84,7 +84,7 @@ DATABASES = {
          'NAME': 'swagger',
          'USER': 'postgres',
          'PASSWORD': os.environ['POSTGRES_PASSWORD'],
-         'HOST': 'docker_swaggerpgdb_1'
+         'HOST': '127.0.0.1'
     },    
 }
 
