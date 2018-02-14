@@ -1,7 +1,7 @@
 import os
 from django.contrib.gis.geos import fromstr
 from .convert_coords import utm_to_latlon
-from appswagger.models import Raingage
+from appclimate.models import Raingage
 
 SRID = 4326
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

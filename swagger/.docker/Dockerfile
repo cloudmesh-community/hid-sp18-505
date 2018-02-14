@@ -1,8 +1,8 @@
 FROM python:latest
 
-# EXPOSE 5000
-# EXPOSE 8000
-# EXPOSE 8080
+EXPOSE 5000
+EXPOSE 8000
+EXPOSE 8080
 
 RUN apt-get update --fix-missing -y
 RUN apt-get upgrade -y
