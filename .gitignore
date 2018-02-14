@@ -1,4 +1,5 @@
 *.pyc
 *.bak
 .env
-swagger/.docker/mongodb/data
+./swagger/.docker/mongodb/data
+./swagger/.docker/pgsql/data
