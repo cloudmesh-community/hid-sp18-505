@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django.db import models
-
+# from django.db import models
+from django.contrib.gis.db import models
 
 class Raingage(models.Model):
     """ Raingage domain model.
@@ -14,14 +14,17 @@ class Raingage(models.Model):
     # The current station name
     name = models.CharField(null=False, blank=False, unique=True, max_length=150)
 
-    latitude = models.DecimalField(max_digits=20, decimal_places=5)
-
-    longitude = models.DecimalField(max_digits=20, decimal_places=5)
+    location = models.PointField(blank=True, null=True, srid=4326)
 
     created = models.DateTimeField(auto_now_add=True, editable=False)
 
     updated = models.DateTimeField(auto_now=True)
 
+    def latitude(self):
+        return self.location.y
+
+    def longitude(self):
+        return self.location.x
 
     def __unicode__(self):
         return u"%s" % self.name
@@ -68,4 +71,3 @@ class PrecipEvent(models.Model):
     class Meta:
         app_label = 'appswagger'
         verbose_name = 'Precip Event'
-
