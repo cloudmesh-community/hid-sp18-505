@@ -23,5 +23,5 @@ schema_view = get_swagger_view(title='Swagger API')
 urlpatterns = [
     path(r'', include('appclimate.urls')),
     path('admin/', admin.site.urls),
-    path('api/', schema_view)
+    path('apidocs/', schema_view)
 ]
