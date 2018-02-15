@@ -46,6 +46,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -84,8 +85,8 @@ DATABASES = {
          'NAME': 'swagger',
          'USER': 'postgres',
          'PASSWORD': os.environ['POSTGRES_PASSWORD'],
-         # 'HOST': '127.0.0.1'
-         'HOST': 'docker_swaggerpgdb_1'
+         'HOST': os.environ['HOST_NAME'],
+         # 'HOST': 'docker_swaggerpgdb_1'
     },    
 }
 
@@ -127,3 +128,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+    # '/var/www/static/',
+]
