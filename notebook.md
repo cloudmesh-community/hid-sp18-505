@@ -25,7 +25,10 @@ Spring 2018
 * 2018/02/09 I was planning on doing substantially more work on this project on this day, but glitches in another class distracted me away from dedicating more work to here.
 
 ## Week 5 Notes
-* 2018/02/12 Over the previous weekend I decided to do some slight restructuring of the project.  I am building the backend and a good portion of the frontend using Django and the [Django web development](https://www.djangoproject.com/) framework, the [Django REST Framework](http://www.django-rest-framework.org/) plugin, and the [Django Swagger UI](https://marcgibbons.com/django-rest-swagger/) plugin to develop the project.  Django and the plugins are excellent for this kind of project and my thinking is why reinvent the wheel.
+* 2018/02/12 Over the previous weekend I decided to do some slight restructuring of the project.  I am building the backend and a good portion of the frontend using Django and the [Django web development](https://www.djangoproject.com/) framework, the [Django REST Framework](http://www.django-rest-framework.org/) plugin, and the [Django Swagger UI](https://marcgibbons.com/django-rest-swagger/) plugin to develop the project.  Django and the plugins are excellent for this kind of project and my thinking is why reinvent the wheel.  
+* 2018/02/14 Developed the Swagger UI for the application and started working on the client part of the application.  The client side is a Vue.js based web interface.  
+* 2018/01/14 Created an empy technology folder that will be used to hold abstracts from the technologies list.  
+* 2018/02/15 Started developing abstracts in the technology folder.  
 
 ## Todos
 
