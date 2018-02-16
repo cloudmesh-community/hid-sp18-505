@@ -1,7 +1,21 @@
+Vue.component('map-component', {
+    template: `<div>Map</div>`,
+    data() {
+        return {
+            msg: "Map Message"
+        }
+    }
+});
+
 new Vue({
     delimiters: ['[[', ']]'],
     el: '#app',
-    data: {
-        title: 'Welcome!'
-    }
-})
+    template: `
+        <map-component />
+    `,
+    data() {
+        return {
+            title: "The title"
+        }
+    }    
+});
