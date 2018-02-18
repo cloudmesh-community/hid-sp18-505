@@ -1,6 +1,8 @@
 *.pyc
 *.bak
 .env
+scratch*
+
 ./swagger/.docker/mongodb/data
 ./swagger/.docker/pgsql/data
 dest/
