@@ -1,12 +1,3 @@
-*.pyc
-*.bak
-.env
-scratch*
-
-./swagger/.docker/mongodb/data
-./swagger/.docker/pgsql/data
-dest/
-
 .DS_Store
 node_modules/
 /dist/
