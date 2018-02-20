@@ -1,0 +1,8 @@
+*.pyc
+*.bak
+*.log
+.env
+scratch*
+
+.vscode/
+.docker/mongo/

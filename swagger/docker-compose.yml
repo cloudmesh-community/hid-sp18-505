@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  mongodb:
+    build:
+      context: .
+      dockerfile: Dockerfile.mongo
+    image: mongodb
+    env_file: .env
+    volumes:
+      - .docker/mongo/data/db:/data/db
+    ports:
+      - 27017:27017
+  # app:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #   env_file: .env
+  #   depends_on:
+  #     - mongodb
+  #   image: app
+  #   volumes:
+  #     - .:/opt/app
+  #   command: /bin/bash
+  #   stdin_open: true
+  #   tty: true
+  #   links:
+  #     - mongodb
+  #   ports:
+  #     - 5000:5000
+  #     - 8000:8000

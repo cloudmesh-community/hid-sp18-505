@@ -1,0 +1,7 @@
+FROM mongo:3.6
+LABEL maintainger="Averill Cate, Jr <acatejr@gmail.com>"
+
+EXPOSE 27017
+
+RUN apt-get update -y --fix-missing
+RUN apt-get update -y
