@@ -31,6 +31,9 @@ Spring 2018
 * 2018/02/15 Started developing abstracts in the technology folder.  Started reading on Latex.  
 * 2018/02/15 More reading on Latex and Jabref.  Trying to learn both.  
 
+# Week 6 Notes -
+* 2018/02/18 Re-worked the swagger app to use mongo, eve, swagger ui and the precip data.
+* 2018/02/19 Small cleanup work for the swagger app.  Update to notes.  
 # Todos
 
 ### Scratch Notes and Reminders
