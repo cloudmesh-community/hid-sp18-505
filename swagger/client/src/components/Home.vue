@@ -1,14 +1,9 @@
 <template>
   <div class="row">
-    <div class="col-md-12">
-      <div class="card">
-        <div class="card-block">
-          <h4 class="card-title">Card title</h4>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
+    <div class="col-md-8">
+      <div id="map"></div>
     </div>
+    <div class="col-md-4">Here</div>
   </div>
 </template>
 
@@ -17,7 +12,25 @@ export default {
   name: 'Home',
   data () {
     return {
-      msg: ''
+      map: null,
+      tileLayer: null,
+      layers: []
+    }
+  },
+  mounted () {
+    this.initMap()
+    // this.initLayers();
+  },
+  methods: {
+    initMap () {
+      var srer = [31.854814534841164, -110.85308074951173]
+
+      // eslint-disable-next-line
+      var mymap = L.map('map').setView(new L.LatLng(srer[0], srer[1]), 11)
+
+      // eslint-disable-next-line
+      L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiYWNhdGVqciIsImEiOiJDTFpxOWpJIn0.1gwlWR5IcLfCAbBs0Ue27g', { maxZoom: 30, attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' + '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' + 'Imagery &copy <a href="http://mapbox.com">Mapbox</a>', id: 'mapbox.streets'
+      }).addTo(mymap)
     }
   }
 }
@@ -25,4 +38,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+#map {
+  /* width: 100%*/;
+  height: 500px;
+}
 </style>
