@@ -7,25 +7,25 @@ db = client.swagger
 raingages = db.raingages
 
 # Remove all raingage docs
-# raingages.remove({})
+raingages.remove({})
 
-# with open('./data/raingages.csv', 'r') as f:
-#     line_count = 0
-#     for l in f.readlines():
-#         if line_count > 0:
-#             (code, name, longitude, latitude) = l.strip().split('|')
-#             latlon = utm_to_latlon(12, float(longitude), float(latitude), 12)            
-#             print(latlon)
-#             raingage = {
-#              'code': code, 
-#              'name': name, 
-#              'longitude': latlon[1], 
-#              'latitude': latlon[0]
-#             }
+with open('./data/raingages.csv', 'r') as f:
+    line_count = 0
+    for l in f.readlines():
+        if line_count > 0:
+            (code, name, longitude, latitude) = l.strip().split('|')
+            latlon = utm_to_latlon(12, float(longitude), float(latitude), 12)            
+            print(latlon)
+            raingage = {
+             'code': code, 
+             'name': name, 
+             'longitude': latlon[1], 
+             'latitude': latlon[0]
+            }
 
-#             raingages.insert_one(raingage)
+            raingages.insert_one(raingage)
 
-#         line_count += 1
+        line_count += 1
 
 MONTH_CHOICES = [
     ['JAN', 'JAN'],
