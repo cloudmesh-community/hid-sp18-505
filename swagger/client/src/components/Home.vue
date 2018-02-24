@@ -1,9 +1,10 @@
 <template>
   <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-6">
+      <h2>Swagger Project Client</h2>
       <div id="map"></div>
     </div>
-    <div class="col-md-4">Here</div>
+    <div class="col-md-6">Here</div>
   </div>
 </template>
 
