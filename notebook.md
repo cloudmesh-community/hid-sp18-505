@@ -36,6 +36,7 @@ Spring 2018
 * 2018/02/19 Small cleanup work for the swagger app.  Update to notes.
 * 2018/02/20 Added more to the client side of the project.
 * 2018/01/21 Added more to the client side of the project.  Also, ran a simple plagarism check against the technology abstracts.
+* 2018/01/23 Minor changes to the swagger project client ui.  Update technology abstract work.
 
 # Todos
 
