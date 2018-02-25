@@ -6,3 +6,6 @@ scratch*
 
 .vscode/
 .docker/mongo/
+/dist/
+server/templates/index.html
+server/templates/dist/

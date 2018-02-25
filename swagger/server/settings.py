@@ -1,4 +1,10 @@
-MONGO_HOST = 'localhost'
+from os import environ
+
+if environ.get('MONGO_HOST') is not None:
+    MONGO_HOST = environ.get('MONGO_HOST')
+else:
+    MONGO_HOST = 'localhost'
+
 MONGO_PORT = 27017
 
 # Skip these if your db has no auth. But it really should.

@@ -1,8 +1,16 @@
 import pymongo
 from pymongo import MongoClient
 from data.convert_coords import utm_to_latlon
+from os import environ
 
-client = MongoClient('127.0.0.1', 27017)
+# if environ.get('MONGO_HOST') is not None:
+#     MONGO_HOST = environ.get('MONGO_HOST')
+# else:
+#     MONGO_HOST = '127.0.0.1'
+
+MONGO_HOST = '127.0.0.1'
+# MONGO_HOST = 'swagger_mongodb_1'
+client = MongoClient(MONGO_HOST, 27017)
 db = client.swagger
 raingages = db.raingages
 
