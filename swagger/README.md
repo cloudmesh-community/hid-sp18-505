@@ -11,6 +11,7 @@ Assuming you are in the root of the project.
 To see the Swgger UI visit http://127.0.0.1:5000/apidocs
 To see the swagger.json specification visit http://127.0.0.1/api-docs
 The swagger.json spec is generatate automatically by using the [Eve-Swagger plugin](https://github.com/pyeve/eve-swagger).  
+To see the application's client open http://127.0.0.1:5000/index  
 
 ## Example curl calls
 curl -i http://127.0.0.1:5000/  
