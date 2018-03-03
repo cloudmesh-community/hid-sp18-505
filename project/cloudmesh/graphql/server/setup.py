@@ -23,8 +23,8 @@ def readfile(filename):
         return stream.read().split()
 
 
-#requiers = readfile ('requirements.txt')
-requiers = """
+# requires = readfile ('requirements.txt')
+requires = """
 psutil
 pygments
 tox

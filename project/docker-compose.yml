@@ -1,0 +1,26 @@
+version: '3'
+services:
+  ccmongo:
+    image: mongo:3.7.2
+    env_file: .env
+    ports:
+      - 27017:27017
+    volumes:
+      - ./mongo/db:/data/db
+  ccapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file: .env
+    depends_on:
+      - ccmongo
+    image: cmmapp
+    volumes:
+      - .:/opt/app
+    stdin_open: true
+    tty: true
+    links:
+      - ccmongo
+    ports:
+      - 5000:5000
+      - 8000:8000
