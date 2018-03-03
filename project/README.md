@@ -1,6 +1,6 @@
 # Advanced Cloud Computing Project  
-- [ ] Setup mongo server  
-- [ ] Dockerize app  
+- [x] Setup mongo server  
+- [x] Dockerize app  
 - [ ] Pretty web ui client  
 - [ ] Review and make tutorial  
 - [ ] Outline Paper  

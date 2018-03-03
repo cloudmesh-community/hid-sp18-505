@@ -17,6 +17,7 @@ selenium-debug.log
 /test/unit/coverage/
 /test/e2e/reports/
 project/mongo/
+project/cloudmesh/graphql/mongo
 .vscode/
 
 # Editor directories and files
