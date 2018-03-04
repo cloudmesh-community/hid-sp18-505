@@ -2,7 +2,8 @@ from mongoengine import connect
 from models import Raingage
 
 # connect('ccproject', host='mongomock://localhost', alias='default')
-connect('ccproject', host='project_ccmongo_1', port=27017, alias='default')
+# connect('ccproject', host='project_ccmongo_1', port=27017, alias='default')
+connect('ccproject', host='127.0.0.1', port=27017, alias='default')
 
 def init_db():
     for i in range(1, 150):

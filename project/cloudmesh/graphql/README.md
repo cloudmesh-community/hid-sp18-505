@@ -1,12 +1,17 @@
 ## Resources
 Server:  
 [GitHub Developer GraphQL API v4 Docs](https://developer.github.com/v4/)  
-[GitHub GraphQL API Explorer](https://developer.github.com/v4/explorer/)
+[GitHub GraphQL API Explorer](https://developer.github.com/v4/explorer/)  
+
 Client:  
-[Poi](https://github.com/egoist/poi)
+[Poi](https://github.com/egoist/poi)  
+[Poi Example](https://github.com/egoist/poi)  
+https://kofoedanders.com/vue-poi-suave/  
+
+Developer Tools:  
+https://github.com/apollographql/apollo-client-devtools  
 
 ## Example GitHub GraphQL Queries
-
 Retrieve the Cloudmesh organization's issues
 ```
 query { 
@@ -68,3 +73,8 @@ query {
   }
 }
 ```
+# Example curl requests
+curl -X POST -H "Content-Type: application/json" --data '{ "query": "{ status }" }' http://localhost:5000/graphql
+curl -X POST -H "Content-Type: application/json" --data '{ "query": "{ allRaingages {edges{node{id code name }}}}"}' http://localhost:5000/graphql
+# Example link requests
+http://localhost:5000/graphql?
