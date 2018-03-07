@@ -1,4 +1,4 @@
-all:
+all: clean start-docker
 	@echo "Swagger Project Makefile"
 
 clean:
