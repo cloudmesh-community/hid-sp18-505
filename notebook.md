@@ -45,6 +45,7 @@ Spring 2018
 
 # Todos
 * 2018/03/06 Checked on class status in Piazza.  Little busy this week with wife's birthday and work in another class.  
+* 2018/03/06 Added makefile for Swagger project
 
 ### Scratch Notes and Reminders
  - Left off on p. 80 in handbook.  
