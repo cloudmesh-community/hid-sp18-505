@@ -35,10 +35,16 @@ Spring 2018
 * 2018/02/18 Re-worked the swagger app to use mongo, eve, swagger ui and the precip data.
 * 2018/02/19 Small cleanup work for the swagger app.  Update to notes.
 * 2018/02/20 Added more to the client side of the project.
-* 2018/01/21 Added more to the client side of the project.  Also, ran a simple plagarism check against the technology abstracts.
-* 2018/01/23 Minor changes to the swagger project client ui.  Update technology abstract work.
+* 2018/02/21 Added more to the client side of the project.  Also, ran a simple plagarism check against the technology abstracts.
+* 2018/02/23 Minor changes to the swagger project client ui.  Update technology abstract work.
+
+# Week 7 Notes
+* 2018/02/25 Started transcribing assignments into tickets in my GitHub issues.  
+* 2018/03/01 Started laying ground work for tutorial, paper and project.  
+* 2018/03/03 Build GraphQL client and serve.  Started learning how to tie in GitHub's GraphQL API.    
 
 # Todos
+* 2018/03/06 Checked on class status in Piazza.  Little busy this week with wife's birthday and work in another class.  
 
 ### Scratch Notes and Reminders
  - Left off on p. 80 in handbook.  
