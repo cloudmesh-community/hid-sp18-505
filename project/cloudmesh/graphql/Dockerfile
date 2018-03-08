@@ -6,6 +6,5 @@ RUN apt-get upgrade -y
 RUN apt-get install -y mongodb-clients psmisc
 
 WORKDIR /opt/app/
-COPY . /opt/app/
+COPY ./server /opt/app/
 RUN pip install -r requirements.txt
-# CMD ["python server/app.py"]

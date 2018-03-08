@@ -5,8 +5,8 @@ services:
     env_file: .env
     ports:
       - 27017:27017
-    volumes:
-      - ./mongo/db:/data/db
+  #   volumes:
+  #     - ./mongo/db:/data/db
   ccapp:
     build:
       context: .
@@ -24,3 +24,13 @@ services:
     ports:
       - 5000:5000
       - 8000:8000
+  ccclient:
+    build:
+      context: .
+      dockerfile: Dockerfile.node
+    env_file: .env
+    image: ccclient
+    ports:
+      - 4000:4000
+    command: npx poi src/index.js
+
