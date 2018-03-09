@@ -1,0 +1,27 @@
+
+* Introduction
+Web services, why, history, soap/xml, rest/json, graphql, others...
+
+** Required Software
++ python
+  + graphene
+  + flask
+  + json server
++ pyenv
++ git
++ docker ?
++ text editor
+
+** Steps/Procedures
+1. Install python
+2. Install pyenv
+3. Create virtualenv for tutorial
+4. Install docker (?)
+5. Create dockerfiles and docker-compose file (?)
+6. Install python requirements into python virtualenv
+7. Build the server.py/app.py file
+8. Show the graphql explorer
+
+** References/Citations
+Graphql site
+Look in resources section of project README.md and include sites that discuss justifications for grapql
