@@ -1,10 +1,9 @@
 \title{GraphQL in Cloud Computing}
 
-
 \author{Averill Cate, Jr}
 \affiliation{%
   \institution{The University of Indiana}
-  \streetaddress{The University of Indiana}
+  \streetaddress{}
   \city{Bloomington} 
   \state{Indiana} 
   \postcode{47408}
@@ -14,7 +13,6 @@
 % The default list of authors is too long for headers}
 \renewcommand{\shortauthors}{A. Cate, Jr}
 
-
 \begin{abstract}
 This paper provides a sample of a \LaTeX\ document which conforms,
 somewhat loosely, to the formatting guidelines for
@@ -23,96 +21,15 @@ ACM SIG Proceedings.
 
 \keywords{hid505, GraphQL, Web Services, Cloud, Computing}
 
-
 \maketitle
 
-\section{Organization}
-
-The instructions are available at 
-
-\url{https://github.com/cloudmesh-community/hid-sample/blob/master/paper-instructions.md}
-
-It will bring you to a link allowing you to easily download the PDF
-version of the instructions. The PDF document is located at 
-
-\url{https://github.com/cloudmesh-community/hid-sample/raw/master/paper-instructions.pdf}
-
-
-The template is located at
-
-\url{https://github.com/cloudmesh-community/hid-sample/tree/master/paper}
-
-
-This sample has some advanced features that may not be offered by
-other \LaTeX\ frameworks. All of these features are accessible at this
-time throug a makefile. These advanced features are optional and
-introduce a number of automated tests for the document. Such tests are
-executed through a Makefile. Such makefiles can be executed on Linux
-or OSX. They are not available on sharelatex. As we have taught you
-how to set up a Linux system in class it is part of the leraning
-experience that you use that to verify the correctness of your
-paper. Alternatively you can set up a docker container and use
-that. It will be your responsibility to create such a container or set
-up the Linux environment with a \textit{full} version of \LaTeX\ and biber
-installed.
-
-The document is organized in a a repository, that needs to be
-replicated into your github repository. {\bf Please make sure that all
-  filenames and directory names but a README.md are all lower case and
-  have no underscore in it. Please make sure they do not contain a
-  space in the filename.} We repeat again: Be mindful about the
-capitalization of filenames and directory names. We only use lower
-case for any file in our directory and we never use spaces or non ASCI
-characters. 
-
-IN order for you to most easily compile the paper you will also need
-to check out the directory hid-sample that includes the formats. 
-
-Your recommended directories should look like
-
-\begin{verbatim}
-~/github/cloudmesh-community/hid-samle
-~/github/cloudmesh-community/hid-sp18-000
-\end{verbatim}
-
-where 000 the number part of your hid. The two hid directories are
-cloned from github. We taught you how to do this and it is a class
-goal that you know how to do it. 
-
-In your hid folder you will find, once it is set up the following
-directory and files:
-
-
-We have the following files that you will modify:
-
-\begin{verbatim}
-paper/content.tex
-paper/report.tex
-paper/report.bib
-images/README.md
-\end{verbatim}
-
-We separated the content from the report format into two different
-files, as we found that students in the past manipulated our format to
-circumvent our page limitation and artificially increased spacing and
-other unnecessary things that we would consider as cheating.
-If you
-
-Thus the only file you are allowed to modify is the content.tex file
-and the report.bib bibliography file and the images directory in which
-you place your images.
-
-Within the text, images and tables are {\bf must} be placed in floats
-as discussed in the handbook. You can place them with \verb|[htb]| at
-any place in the document. However, we will for the submission force
-the placement at the end of the document. You do not have to place
-them at the end. Please keep in mind that tables and figurs and
-programs that are also to be placed in figures do not count towards
-the paper length. Please also be reminded this is not a presentation
-and that lengthy enumerations will lead to point deductions. IN case
-of questions, consult with the TAs.
-
 \section{Introduction}
+GraphQL is a new tool for exchanging data over the internet-web.  It is awesome.
+Semantically, it is similar to how spoken language is structure (at least English).  
+Visually, it looks really cool and when you structure a data query the structure 
+of the query looks similar to the resulting data set.  As the name implies it relies 
+on a graph topology so the data can be visualized in graph/edges/and nodes structure.  
+This makes it easier to determine relationships within the database.
 
 Put here an introduction about your topic. 
 We just need one sample reference so the paper compiles in \LaTeX\ so we
