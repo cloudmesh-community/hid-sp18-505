@@ -43,6 +43,9 @@ Spring 2018
 * 2018/03/01 Started laying ground work for tutorial, paper and project.  
 * 2018/03/03 Build GraphQL client and serve.  Started learning how to tie in GitHub's GraphQL API.    
 
+# Week 8 Notes
+* 2018/03/2015 Started work on class project, tutorial and paper.  
+
 # Todos
 * 2018/03/06 Checked on class status in Piazza.  Little busy this week with wife's birthday and work in another class.  
 * 2018/03/06 Added makefile for Swagger project.  
