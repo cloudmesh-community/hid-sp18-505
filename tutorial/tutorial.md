@@ -67,36 +67,28 @@ The preferred method for developing python based projects is to use a separate e
 
 **GVL: DO NOT USE NUMBERS HERE AS SECTION NUMBERS MUST STAY VARIABLE**
 
-## Headline missing
+## Using Virtualenv
 
-3.1. Access the command line
+First Access the command line. Next, install pyenv-virtualenv while following the instructions provided at 
 
-3.2. Install pyenv-virtualenv (ref: https://github.com/pyenv/pyenv-virtualenv)
+* <https://github.com/pyenv/pyenv-virtualenv>
 
-3.4 At the command prompt type:
-git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
+Or better use our handbook and follow the instructions provided there. At the command prompt type:
 
-3.5 At the command prompt type:
-echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
+	git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
+	echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
+	exec "$SHELL"
+	pyenv virtualenv graphqltut
 
-3.6 At the command prompt type:
-exec "$SHELL"
+We now have a python virtualenv that is specifically for this project.
 
-3.7 At the command prompt type:
-pyenv virtualenv graphqltut
+## Installing Graphql
 
-3.9 Create a project folder ```mkdir graphqltut```
+Before we start we create a a project folder and cd into it
 
-## Headline missing
+	mkdir ~/cloudmesh/graphql
 
-**you can refer to the handbook section and look up the label and use ref**
-
-We now have a python virtualenv that is specifically for this project. 
-
-	Install python requirements into python virtualenv
-
-The tutorial has a few python library dependencies.  We need to install those dependencies 
-into the python virtualenv we created.
+The tutorial has a few python library dependencies.  We need to install those dependencies into the python virtualenv we created.
 
 At the command prompt: 
 
@@ -122,6 +114,8 @@ the python virtualenv or someone else does then once the virtualenv is created t
 7. Build the server.py/app.py file
 
 8. Show the graphql explorer
+
+
 
 ## References/Citations
 
