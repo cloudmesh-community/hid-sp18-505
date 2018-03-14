@@ -44,7 +44,12 @@ Spring 2018
 * 2018/03/03 Build GraphQL client and serve.  Started learning how to tie in GitHub's GraphQL API.    
 
 # Week 8 Notes
-* 2018/03/2015 Started work on class project, tutorial and paper.  
+* 2018/03/05 Started work on class project, tutorial and paper.
+* 2018/03/09 More work on tutorial and paper.  Groundwork on project and project ideas.
+
+# Week 9 Notes
+* 2018/03/11 Some work on paper.  
+* 2018/03/12 Small amount of work on paper.  
 
 # Todos
 * 2018/03/06 Checked on class status in Piazza.  Little busy this week with wife's birthday and work in another class.  
