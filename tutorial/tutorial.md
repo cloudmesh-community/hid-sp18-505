@@ -90,13 +90,16 @@ Before we start we create a a project folder and cd into it
 
 The tutorial has a few python library dependencies.  We need to install those dependencies into the python virtualenv we created.
 
-At the command prompt: 
+At the command prompt type 
 
-1. Type pyenv activate graphqltut (this makes sure we are using the local python  development virtualenv and not the global python environment)  
+	pyenv activate graphqltut 
+	
+This makes sure we are using the local python  development virtualenv and not the global python environment. Now Type 
 
-2. Type pip freeze -- this should *not* display a list of libraries since our virtualenv was just created.  
+	pip freeze 
 
-Now install flask and graohene:
+which should *not* display a list of libraries since our virtualenv was just created.  
+We do this step to make sure you do not overwrite or modify your default python environment. Now install flask and graohene:
 
 	pip install flask  
 	pip install graphene  
@@ -111,16 +114,22 @@ the python virtualenv or someone else does then once the virtualenv is created t
 
 	pip install -r requirements.txt
 
-7. Build the server.py/app.py file
+## Build a graphql Application
 
-8. Show the graphql explorer
+Build the server.py/app.py file
 
 
 
-## References/Citations
+## Explore the Data
 
-Graphql site
-Look in resources section of project README.md and include sites that discuss justifications for grapql
+Show the graphql explorer
+
+
+
+## References
+
+* Graphql site
+* Look in resources section of project README.md and include sites that discuss justifications for grapql
 
 ## Optional
 
