@@ -1,9 +1,13 @@
-# GraphQL Tutorial
+# GraphQL
+\label{s:graphql}
+\index{GraphQL}
+
 Advanced Cloud Computing  
 Indiana University Data Science Program  
 Spring 2018  
 
 ## Introduction
+
 We are in the information age.  Possibly, the information overload age.
 Regradless, information or data are the commodity of this technological era.
 Given that a significant number, if not most of the world's industries are
@@ -30,6 +34,7 @@ However, the tutorial will provide guidance for installing the packages that
 is in the tutorial's application code.
 
 ## Required Software
+
 + python 3.x^*  
 + pyenv^*  
 + pyenv virtualenv  
@@ -42,6 +47,7 @@ is in the tutorial's application code.
 + text editor^*  
 
 ## Assumptions
+
 + User knows how to work at the command line.
 + User has installed python 3+
 + User has installed and configured pyenv
@@ -52,12 +58,19 @@ is in the tutorial's application code.
 ^* = installation not covered in the tutorial
 
 ## Steps/Procedures
+
 1. Install python 3.x - Assumed to have been completely by the user.
 2. Install pyenv - Assumed to have been completely by the user.
 3. Create virtualenv for tutorial
+
 The preferred method for developing python based projects is to use a separate environment for each python project.  There are several ways to accomplish this.  The first is by creating a docker image and container for the project.  This is recommended, but not covered in this tutorial.  The second method is by installing and using pyenv's virtualenv plugin, this assumes the user has already installed and configured pyenv.
 
+**GVL: DO NOT USE NUMBERS HERE AS SECTION NUMBERS MUST STAY VARIABLE**
+
+## Headline missing
+
 3.1. Access the command line
+
 3.2. Install pyenv-virtualenv (ref: https://github.com/pyenv/pyenv-virtualenv)
 
 3.4 At the command prompt type:
@@ -74,34 +87,47 @@ pyenv virtualenv graphqltut
 
 3.9 Create a project folder ```mkdir graphqltut```
 
+## Headline missing
+
+**you can refer to the handbook section and look up the label and use ref**
+
 We now have a python virtualenv that is specifically for this project. 
 
-4. Install python requirements into python virtualenv
+	Install python requirements into python virtualenv
+
 The tutorial has a few python library dependencies.  We need to install those dependencies 
 into the python virtualenv we created.
 
 At the command prompt: 
-4.1 Type pyenv activate graphqltut (this makes sure we are using the local python development virtualenv and not the global python environment)  
-4.2 Type pip freeze -- this should *not* display a list of libraries since our virtualenv was just created.  
-4.3 Type pip install flask  
-4.4 Type pip install graphene  
-That is it.  We now have the minimum environment to build a Python GraphQL server and client.  One last step though.  It is a good idea to keep track of 
+
+1. Type pyenv activate graphqltut (this makes sure we are using the local python  development virtualenv and not the global python environment)  
+
+2. Type pip freeze -- this should *not* display a list of libraries since our virtualenv was just created.  
+
+Now install flask and graohene:
+
+	pip install flask  
+	pip install graphene  
+
+We now have the minimum environment to build a Python GraphQL server and client.  One last step though.  It is a good idea to keep track of 
 Python dependencies as we install them.  To do that, at the command line type:  
 
-```pip freeze > requirements.text```
+	pip freeze > requirements.text
 
 This command saves the list of libraries we have installed plus the depdencies of the libraries we installed.  If for some reason you need to re-create 
 the python virtualenv or someone else does then once the virtualenv is created the python libraries are easily re-installed my issued the command:
 
-```pip install -r requirements.txt```
+	pip install -r requirements.txt
 
 7. Build the server.py/app.py file
 
 8. Show the graphql explorer
 
-** References/Citations
+## References/Citations
+
 Graphql site
 Look in resources section of project README.md and include sites that discuss justifications for grapql
 
-** Optional
+## Optional
+
 liquidprompt
