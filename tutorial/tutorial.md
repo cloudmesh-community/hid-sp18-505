@@ -46,6 +46,8 @@ is in the tutorial's application code.
 + docker^*  
 + text editor^*  
 
+^* = installation not covered in the tutorial
+
 ## Assumptions
 
 + User knows how to work at the command line.
@@ -54,8 +56,6 @@ is in the tutorial's application code.
 + User has installed and knows how to use a text editor like emacs, or vscode.
 + Working on a Unix/Linux/OSX based operating system.
 + User has a .bashrc (using bash shell)
-
-^* = installation not covered in the tutorial
 
 ## Steps/Procedures
 
