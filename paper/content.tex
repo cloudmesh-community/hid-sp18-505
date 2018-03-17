@@ -34,7 +34,7 @@ of each.
 Although data services and data exchange long pre-date the early 2000's.  The
 volume of work that pre-dates 2000 would require volumes to adequately describe.
 For clarity, this paper focuses on data services technologies that have emerged
-since 2000 and the advent of ``Web 2.0`` and in particular the data mining and
+since 2000 and the advent of Web 2.0 and in particular the data mining and
 data sciences explosion that is taking place across the globe.
 
 This paper will breifly describe two import exchange protocols, SOAP and REST.  
@@ -44,11 +44,42 @@ protocols that currently exist.  Nor are XML, JSON, and GraphQL the only data
 formats that exist.  However, both protocols and all three formats are widely
 used in academia and industry today and merit discussion.
 
-\section{SOAP}
+\section{SOAP and XML}
 SOAP is a XML-based data exchage protocol\cite{Quaine2007}.  SOAP stands for
 ``Simple Object Access Protocol``\cite{Microsoft2018}.  SOAP is a lightweight
-protocol that simply stated is extensible and designed to facilitate the
-exchange of data between disparate systems \cite{Microsoft2018}.
+protocol that, simply stated, is extensible and designed to facilitate the
+exchange of structured data between disparate systems \cite{Microsoft2018}.
+Etensible Markup Language (XML) is the structured data format that has been
+used in conjuction with SOAP for data services \cite{Walsh1998}.  SOAP and XML
+are still widely used today.  In some cases, due to legacy systems and security
+concerns SOAP and XML are required for the use and development of data services.
+An example of XML is shown in Figure~\ref{f:xml-example}
+\cite{WikipidiaXML1028}.  An important point to note is, XML is a markup
+language, which can be interpretted as a meta-language.  XML serves to not only
+contain the data it delivered, but it also describes the data \cite{Aihkisalo2012}.
+
+\section{REST and JSON}
+Pautasso et. al. \cite{Pautasso2008} define REST as
+Representational State Transfer.  REST was designed by Roy Fielding as part of his
+doctoral dissertation while attending the University of California, Irvine
+\cite{Fielding2000}.  Fielding developed REST in order to propose a
+framework for and architecture that can be used in
+``network-based application software`` \cite{Fielding2000}.
+Fieldings work on REST occurred around 2000, but it has only been in the last
+few years that we have seen the widespread implementation of REST.
+Figure~\ref{f:rest-example} we show an example of a REST/JSON data packet.  The 
+example could be the output from a query to a RESTful web service or the input
+to be delivered to a RESTful web service that is meant to create our update
+data.  JSON in comparison to XML is not a markup language.  In comparison to
+XML, JSON is the data with some defining attributes, but it his little, if any,
+meta-data that describe the data itself.  As an example, a JSON data packet
+might have a list of users where each user object or item has a first name
+attribute, last name attribute and an email address attribute with values
+for each of those attributes, but the data packet itself, does not describe
+the data format.  REST and JSON have also leant themselves towards the
+development of web-based Application Programming Interfaces (API).  
+
+\section{GraphQL}
 
 \section{Figures}
 
@@ -240,3 +271,12 @@ citations in the section.
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{report} 
 
+\begin{figure}[!ht]
+  \centering\includegraphics[width=\columnwidth]{images/xml-example.png}
+  \caption{SOAP/XML Example}\label{f:xml-example}
+\end{figure}
+
+\begin{figure}[!ht]
+  \centering\includegraphics[width=\columnwidth]{images/json-rest-example.png}
+  \caption{REST/JSON Example}\label{f:rest-example}
+\end{figure}
