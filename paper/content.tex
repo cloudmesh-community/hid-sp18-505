@@ -62,24 +62,56 @@ contain the data it delivered, but it also describes the data \cite{Aihkisalo201
 Pautasso et. al. \cite{Pautasso2008} define REST as
 Representational State Transfer.  REST was designed by Roy Fielding as part of his
 doctoral dissertation while attending the University of California, Irvine
-\cite{Fielding2000}.  Fielding developed REST in order to propose a
-framework for and architecture that can be used in
-``network-based application software`` \cite{Fielding2000}.
-Fieldings work on REST occurred around 2000, but it has only been in the last
-few years that we have seen the widespread implementation of REST.
-Figure~\ref{f:rest-example} we show an example of a REST/JSON data packet.  The 
-example could be the output from a query to a RESTful web service or the input
-to be delivered to a RESTful web service that is meant to create our update
-data.  JSON in comparison to XML is not a markup language.  In comparison to
-XML, JSON is the data with some defining attributes, but it his little, if any,
-meta-data that describe the data itself.  As an example, a JSON data packet
-might have a list of users where each user object or item has a first name
-attribute, last name attribute and an email address attribute with values
-for each of those attributes, but the data packet itself, does not describe
-the data format.  REST and JSON have also leant themselves towards the
-development of web-based Application Programming Interfaces (API).  
+\cite{Fielding2000}.  Fielding developed REST in order to propose a framework
+for and architecture that can be used in ``network-based application software``
+\cite{Fielding2000}.  Fieldings work on REST occurred around 2000, but it has
+only been in the last few years that we have seen the widespread implementation
+of REST.  Figure~\ref{f:rest-example} we show an example of a REST/JSON data
+packet.  The example could be the output from a query to a RESTful web service
+or the input to be delivered to a RESTful web service that is meant to create
+our update data.  JSON in comparison to XML is not a markup language.  In
+comparison to XML, JSON is the data with some defining attributes, but it his
+little, if any, meta-data that describe the data itself.  As an example, a JSON
+data packet might have a list of users where each user object or item has a
+first name attribute, last name attribute and an email address attribute with
+values for each of those attributes, but the data packet itself, does not
+describe the data format.  REST and JSON have also leant themselves towards the 
+development of web-based Application Programming Interfaces (API).
 
 \section{GraphQL}
+SOAP and XML, REST and JSON have been part of the progression of the development
+of web services and web APIs.  Some might say that the development of each
+has revealed something new that has lead to the next technology
+advancement in data services and data.  With the development of each technology
+we also discover limitations of that new technology, which in-turn leads to the
+next technological advancment.  For example, in industry, not long after SOAP
+and XML became primary tools in web API development, some people began to
+notice the difficulty in reading XML data in cases where developers need to
+confirm data requests or data responses.  One might argue that using XML as the
+data packet could have been an over extension of the use of XML in web
+services.  In the mid to late 2000s REST and JSON based web services began to
+take hold.  JSON may have been a better fit for web services and data mining
+because formatting data to comply with a JSON data format focuses more on the
+data itself than describing the data like XML does.  If true, and we conceed
+that the format of JSON data rendered for situations where developers are trying
+to test web services and the rendered data are easier to read then JSON may have
+been the next logical step in the evolution of web services.  
+
+Figure~\ref{f:wsdl-example} \cite{mycodde2016} is an example of the type of
+interface developers and web service data consumers had to understand in order
+to work effectively with SOAP/XML based web services.  Anyone trying to read
+the WSDL document had to not only understand the nuances of things like XML,
+namespacing, but also had to be able to understand how the web service's
+operations were defined int the WSDL document.
+
+Figure~\ref{f:swaggerui-example}\cite{swaggerio2018} is example of a REST/JSON web service
+interface.  In comparison, it is easier to understand not only what proceedures
+or methods the service provides, but as Figure~\ref{f:swaggerui-expansion}\cite{swaggerio2018}
+demonstrates, it is easier to under stand the data types for the services input
+parameters and resulting output data packets.  However, Figure~\ref{f:swagger-resp}\cite{swaggerresp2018}
+provides an example of service  response from a REST/JSON based service and
+although, visually, easier to understand compared XML.  It is challenging to
+understand the relationships between the data set's components.  
 
 \section{Figures}
 
@@ -279,4 +311,24 @@ citations in the section.
 \begin{figure}[!ht]
   \centering\includegraphics[width=\columnwidth]{images/json-rest-example.png}
   \caption{REST/JSON Example}\label{f:rest-example}
+\end{figure}
+
+\begin{figure}[!ht]
+  \centering\includegraphics[width=\columnwidth]{images/wsdl-example.jpg}
+  \caption{WSDL Example}\label{f:wsdl-example}
+\end{figure}
+
+\begin{figure}[!ht]
+  \centering\includegraphics[width=\columnwidth]{images/swaggerui.png}
+  \caption{Swagger UI Example}\label{f:swaggerui-example}
+\end{figure}
+
+\begin{figure}[!ht]
+  \centering\includegraphics[width=\columnwidth]{images/swaggerui-expansion.png}
+  \caption{Swagger UI Expanded}\label{f:swaggerui-expansion}
+\end{figure}
+
+\begin{figure}[!ht]
+  \centering\includegraphics[width=\columnwidth]{images/swaggerui_execute.png}
+  \caption{Swagger UI Response}\label{f:swagger-resp}
 \end{figure}
