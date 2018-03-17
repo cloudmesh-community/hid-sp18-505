@@ -14,9 +14,16 @@
 \renewcommand{\shortauthors}{A. Cate, Jr}
 
 \begin{abstract}
-This paper provides a sample of a \LaTeX\ document which conforms,
-somewhat loosely, to the formatting guidelines for
-ACM SIG Proceedings.
+We are in the information age.  Possibly, the information overload age.
+Data are the commodity of this technological era.  A significant number, if not
+most of the world's industries are dependent on the internet and the exchange
+of data.  It is reasonably safe to assume that how data are exchanged is
+an important to understand.  Understanding data services have been changing
+over time may be as vital as development of new tools and methods for data
+exchange.  This paper will describe recent changes in tools and methods that
+are used to facilitate the exchange of data in the information age.  This paper
+will compare recent data service methods and briefly describe the costs and benefits
+of each.
 \end{abstract}
 
 \keywords{hid505, GraphQL, Web Services, Cloud, Computing}
@@ -24,66 +31,25 @@ ACM SIG Proceedings.
 \maketitle
 
 \section{Introduction}
-We are in the information age.  Possibly, the information overload age.
-Data are the commodity of this technological era.  Given that a significant 
-number, if not most of the world's industries are dependent on the internet and 
-the exchange of data it is probably safe to assume that how the data are 
-exchanged is an important thing to understand.  It is probably import to also 
-understand how the exchange mechanisms have been changing over time.
+Although data services and data exchange long pre-date the early 2000's.  The
+volume of work that pre-dates 2000 would require volumes to adequately describe.
+For clarity, this paper focuses on data services technologies that have emerged
+since 2000 and the advent of ``Web 2.0`` and in particular the data mining and
+data sciences explosion that is taking place across the globe.
 
-In the early 2000s, Simple Object Access Protocol (SOAP) based web services 
-emerged as the preferred mechanism for exchanging data electronically.  
-Typically, SOAP was data exchange the protocol and eXtensible Markup Language 
-(XML) was the data format.
+This paper will breifly describe two import exchange protocols, SOAP and REST.  
+Next the paper will compare XML, a data format used in SOAP, with two data
+formats used in REST, JSON, and GraphQL.  SOAP and REST are not the only
+protocols that currently exist.  Nor are XML, JSON, and GraphQL the only data
+formats that exist.  However, both protocols and all three formats are widely
+used in academia and industry today and merit discussion.
 
-Web services, why, history, soap/xml, rest/json, graphql, others...
+\section{SOAP}
+SOAP is a XML-based data exchage protocol\cite{Quaine2007}.  SOAP stands for
+``Simple Object Access Protocol``\cite{Microsoft2018}.  SOAP is a lightweight
+protocol that simply stated is extensible and designed to facilitate the
+exchange of data between disparate systems \cite{Microsoft2018}.
 
-GraphQL is a new tool for exchanging data over the internet-web.  Semantically, 
-it is similar to how spoken language is structure (at least English).  Visually, 
-the structure of a query and the structure of the resulting data set are 
-similar.  As the name implies it relies on a graph topology so the data can be 
-visualized in graph/edges/and nodes structure.  This makes it easier to determine 
-relationships within the database.
-
-Tools like REST, Swagger, and JSON are currently popular tools for data exchange.
-Some may view these tools as a signifiant improvment in comparison to the SOAP/XML
-based web services that have been and are still popular.  When discussing the data
-exhange formats of JSON versus XML, the argument exists that JSON has a more
-intuitive look and feel to the human eye in comparison to XML.
-
-##
-Show and discuss images of XML/SOAP query interface, Swagger query interface, GraphQL
-query interface
-
-Make assertions about the pros and cons of each
-##
-
-##
-Show and discuss images of XML/SOAP query results interface, Swagger query results
-interface, GraphQL query results
-
-The image describes employee information.  In XML the data values are encased in tags.
-The enclosing tags are essential the data object's attribute and the enclose text is the
-.value of that attribue.  The JSON data packet has the same information however each JSON
-object has an attribute and its associated value without the need for opening and closing
-tags that contain the value.  The JSON data is a notably smaller amount of visual noise.
-It is also a notably smaller data set which can be a significant cost savings for very large
-data sets.
-
-Insert image here
-images/json-vs-xml.png
-Don't forget Citation: https://www.sunnyhoi.com/json-vs-xml-format-use-api/
-
-Insert image here
-images/graphql-vs-rest.jpg
-Dont' forget citation: https://da-14.com/blog/moment-glory-graphql-or-it-time-enjoy-rest
-###
-
-##
-Show examples of parsing tools and methods for each data set.  Show examples only in Python and
-note that the parsing the results for REST and GraphQL are very similar because both protocols return
-JSON data.
-##
 \section{Figures}
 
 In Figure~\ref{f:fly} we show a fly. Please note that because we use
