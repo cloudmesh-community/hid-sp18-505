@@ -1,7 +1,7 @@
 % status: 0
 % chapter: TBD
 
-\title{GraphQL in Cloud Computing}
+\title{GraphQL, Advancing APIs}
 
 \author{Averill Cate, Jr}
 \affiliation{%
@@ -129,8 +129,11 @@ to understand the relationships between the data set's components.
 \section{GraphQL}
 ``GraphQL is a query language constructed to facilitate the developmet of APIs``\cite{FacebookGraphQL2018}.
 GraphQL is meant to provide a complete and understandable description of the
-data in an API as well as allowing clients to ask for exactly what data is needed and
-nothing more than that\cite{FacebookGraphQL2018}.
+data in an API as well as allowing clients to ask for exactly what data is 
+needed and nothing more than that\cite{FacebookGraphQL2018}.  GraphQL was 
+developed by Facebook to address Facebook's need for having an API that could 
+retrieve and describe all of Facebook's data while keeping the API simple to 
+learn and use\cite{Byron2015}.
 
 An issue with both SOAP and REST based services is that once a remote
 proceedure is implemented both inputs and outputs are fixed.  In other words,
@@ -143,8 +146,8 @@ all three attributes.  However, what if the developer wants the same list of
 users, but only wants the first and last name attributes of each user.  GraphQL
 provides that flexibility.
 
-Figure~\ref{:f:github-graphql-1} shows an example of a GraphQL query and the
-results using GithHub.com's GraphQL API.  Figure~\ref{:f:github-graphql-2} is an
+Figure~\ref{f:github-graphql-1} shows an example of a GraphQL query and the
+results using GithHub.com's GraphQL API.  Figure~\ref{f:github-graphql-2} is an
 example of using GitHub's same GraphQL API, but requesting the list of licences
 excluding the nickname field.
 
@@ -166,146 +169,46 @@ then the new field can be added to the model.  The GraphQL query schema can be
 adjusted for new field and anything that consumes that already accesses that 
 GraphQL query will continue to work.
 
-\section{Tables}
-
-In case you need to create tables, you can do this with online tools
-(if you do not mind sharing your data) such as
-\url{https://www.tablesgenerator.com/} or other such tools (please
-google for them). They even allow you to manage tables as CSV.
-
-or generate them by hand while using the provided template in Table
-\ref{t:mytable}. Note that
-the caption is before the tabular environment.
-
-\begin{table}[htb]
-\centering
-\caption{My caption}
-\label{t:mytabble}
-\begin{tabular}{lll}
-1 & 2 & 3 \\
-\toprule
-4 & 5 & 6 \\
-7 & 8 & 9
-\end{tabular}
-\end{table}
-
-\section{Quotes}
-
-Do not use double quotes \verb|"| but use \LaTeX\ ``quotes''. Quotes
-{\bf MUST} not be used to highlight works. Quotes are {\bf STRICTLY}
-used for quoting text from sources with citation following. If we find
-a quote that is not followed by a citation we will return the paper
-without review.
-
-\section{Labels}
-
-Do not use actual numbers in the taxt after you write for example
-Figure 1 use the ref for the figure while using its label. In our
-example it is Figure~\ref{f:fly} and Table Figure~\ref{t:mytabble}.
-See the source for the example.
-
-\section{Footnotes}
-
-Footnotes must be avoided in papers. All URLs must be included as full
-references and citations and used with the \verb|\cite| command
-\footnote{do not use footnotes}. You {\bf must} not use urls in the
-text or paper.
-
-\section{Plagiarism}
-
-The class includes a section about plagiarism which you must adhere
-to. Copying text without proper citation is considered cheating and we
-will assign the grade ``F'' for the paper if we find you do it. It is
-in your responsibility to make sure plagiarism does not occur. Please
-be aware that our checks are better than the once provided by turnitin
-or other online checkers. Excuses such as ``I did not have time'' or
-``I forgot'' can not apply as you have enough time to prepare the
-paper and must not forget. 
-
-\section{Check}
-
-make sure just as in previous assignments that you check your paper
-with chktex and lacheck. Fix the errors that you see. Some of the
-errors may be ok, but in general make sure you address all of them. If
-in doubt work with the TA. Simply use
-
-\begin{verbatim}
-make check
-\end{verbatim}
-
-We include in the handbook a list with common issues that we see when
-students submit papers. One particular important issue is not to use
-the underscore in bibtex labels. It is your responsibility to check
-the paper for the issues indicated.
-
-To check bibliographies simply use
-
-\begin{verbatim}
-pdflatex report
-bibtex report
-\end{verbatim}
-
-You will see the errors and warning son the screen address them
-
-TA's will in addition use a special test checking for additional
-format issues such as detecting if you used labels and refs for
-floats. You are welcome to also try this test, but we provide it
-without explanation as no explanation is needed since if you followed
-the instructions on floats there should be no issues. If you like to
-do that test, you can use  
-
-\begin{verbatim}
-make check-ta
-\end{verbatim}
-
-\section{Convenient Setup}
-
-If you do not have already a paper dir in your repository, here is a
-way to create one. Replace the hid-sp18-000 with your hid.
-
-\begin{verbatim}
-export HID=hid-sp18-000
-mkdir -p ~/github/cloudmesh-community
-cd ~/github/cloudmesh-community
-git clone https://github.com/cloudmesh-community/hid-sample.git
-git clone https://github.com/cloudmesh-community/$HID.git
-\end{verbatim}
-
-Next copy the paper example
-
-\begin{verbatim}
-cp -r hid-sample/paper $HID
-cd $HID
-git add paper
-git commit -m "add the paper directory" paper
-git push
-\end{verbatim}
-
-Make sure there is no \verb|/| behind the paper in the cp command or you mess up the
-copy process.
-
-
-\section{Creating the PDF}
-
-The PDF\ can be created simply with 
-
-\begin{verbatim}
-make clean
-\end{verbatim}
-
-
-
-{\bf UNDER NO CIRCUMSTANCES ARE YOU ALLOWED TO CHECK IN YOUR PDF OR
-  TEMPORARY LATEX FILES INTO GITHUB. GIT NEEDS TO STAY CLEAN AND ONLY
-  CONTAIN THE SOURCES.}
-
-We will deduct points if you do violate this.
+A third issue that GraphQL addresses that can be viewed as a challenge in SOAP 
+or REST services is accessing related resources in single requests\cite{FacebookGraphQL2018}.  
+Typically in REST or SOAP, if a user object had a one-to-many relationship to 
+an address object and an API consumer wanted to get a user's address data then 
+multiple calls have to be created to retrieve the related resources 
+(i.e., addresses).  Also, the API developers have to develop and maintain 
+multiple API endpoints (i.e., user endpoint, addresses endpoint).
 
 \section{Conclusion}
+There have been very notable advances in data and service delivery since the 
+advent of the Internet and the Internet's integration into industry.  At the 
+same time we are seeing incredible increases in the amounts and demands for 
+data that are used in almost every business and academic sector.  With these 
+changes we see enhancment to the tools used to deliver the data and the 
+services.  
 
-Put here an conclusion. Conclusion and abstracts must not have any
-citations in the section.
+In the early 2000s, we saw data delivery handled via tools like SOAP and XML 
+where XML data packets not only contained the data, but contained meta-data 
+that described the data in the packet.  This required service users to have to 
+develop an understanding of the data and the domain at the same time.  This 
+would not have nessarily been a bad thing, but it would have required more 
+effort.
 
+Between approximately 2005 and 2015 we have seen a wider acceptance and 
+implementation of REST and JSON based web services.  Using JSON as the format 
+for structuring data has lead to possibly cleaner and easier to understand 
+data packets while leaving the metadata for those packets and services as part 
+of the APIs documentation.  However, this still means that someone has to 
+develop and maintain the documentation (metadata) and that service consumers 
+have to expend effort to stay aware of changes to the services being consumed 
+in case a change occurs that might affect the clients accessing those services.
+
+Finally, in approximately 2016, developers at Facebook seemed to have 
+developed the next step forward in service and data delivery by addressing some 
+of the weaknesses in SOAP/XML and REST/JSON by creating and publishing GraphQL.
+Because GraphQL is a query language the structure of the query and the language 
+used to create a query have, what seems to be, a more intuitive fit to the data 
+domain.  This may allow service developers and consumers to work with the 
+services without have to spend time in trying to understand the underlying 
+mechanisms used to deliver the services and the data.
 
 \begin{acks}
 
