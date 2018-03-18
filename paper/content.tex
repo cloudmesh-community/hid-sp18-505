@@ -25,8 +25,9 @@ an important to understand.  Understanding data services have been changing
 over time may be as vital as development of new tools and methods for data
 exchange.  This paper will describe recent changes in tools and methods that
 are used to facilitate the exchange of data in the information age.  This paper
-will compare recent data service methods and briefly describe the costs and benefits
-of each.
+will describe changes in data service methods and technologies and assert possible 
+reasons why those changes are occurring why those changes may improve how data 
+are exchanged as we progress further into the information age.
 \end{abstract}
 
 \keywords{hid505, GraphQL, Web Services, Cloud, Computing}
@@ -40,12 +41,41 @@ For clarity, this paper focuses on data services technologies that have emerged
 since 2000 and the advent of Web 2.0 and in particular the data mining and
 data sciences explosion that is taking place across the globe.
 
+``Web services evolved from the Remote Proceedure Call (RPC) mechanism.``\cite{Kalin2009}.  
+The development of web services is meant to address a distributed computing 
+environment, where data might be stored on one system, applications consuming 
+or processing that data might be stored on a second system and clients that 
+render data are on systems like desktop computers, mobile devices or other 
+machines further process that data.  All of these systems are linked together, 
+typically via some sort of network and an RPC system provides a mechanism so 
+that both the data and proceedures that can be used on that data are 
+discoverable\cite{Kalin2009}.
+
+SOAP and XML, REST and JSON have been part of the progression of the development
+of web services and web Application Programming Interfaces (API).  Some might 
+say that the development of each has revealed something new that has lead to 
+the next technological advancement in data services and data.  After the 
+development of a new technology we also discover limitations of that 
+technology, which in-turn leads to the next technological advancment.  For 
+example, not long after SOAP and XML became primary tools in web API 
+development, some people began to notice the difficulty in reading XML data in 
+cases where developers need to confirm data requests or data responses.  One 
+might argue that using XML as the data packet could have been an over extension 
+of the use of XML in web services.  In the mid to late 2000s, REST and JSON 
+based web services began to take hold.  JSON may have been a better fit for 
+web services and data mining because formatting data to comply with a JSON 
+data format focuses more on the data itself than describing the data like XML 
+does.  If true, and we conceed the format of JSON data rendered for situations 
+where developers are trying to test web services and the rendered data are 
+easier to read then JSON may have been the next logical step in the evolution 
+of web services.  
+
 This paper will breifly describe two import exchange protocols, SOAP and REST.  
 Next the paper will compare XML, a data format used in SOAP, with two data
 formats used in REST, JSON, and GraphQL.  SOAP and REST are not the only
 protocols that currently exist.  Nor are XML, JSON, and GraphQL the only data
 formats that exist.  However, both protocols and all three formats are widely
-used in academia and industry today and merit discussion.
+used in academia and industry today and merit discussion.  
 
 \section{SOAP and XML}
 SOAP is a XML-based data exchage protocol\cite{Quaine2007}.  SOAP stands for
@@ -60,6 +90,13 @@ An example of XML is shown in Figure~\ref{f:xml-example}\cite{WikipidiaXML1028}.
 An important point to note is, XML is a markup language, which can be
 interpretted as a meta-language.  XML serves to not only contain the data it
 delivered, but it also describes the data\cite{Aihkisalo2012}.
+
+Figure~\ref{f:wsdl-example}\cite{mycodde2016} is an example of the type of
+interface developers and web service data consumers had to understand in order
+to work effectively with SOAP/XML based web services.  Anyone trying to read
+the WSDL document had to not only understand the nuances of things like XML,
+namespacing, but also had to be able to understand how the web service's
+operations were defined int the WSDL document.
 
 \section{REST and JSON}
 Pautasso\cite{Pautasso2008} define REST as Representational State
@@ -78,82 +115,56 @@ that describe the data itself.  As an example, a JSON data packet might have a
 list of users where each user object or item has a first name attribute, last
 name attribute and an email address attribute with values for each of those
 attributes, but the data packet itself, does not describe the data format.  REST
-and JSON have also leant themselves towards the development of web-based
-Application Programming Interfaces (API).
-
-\section{GraphQL}
-SOAP and XML, REST and JSON have been part of the progression of the development
-of web services and web APIs.  Some might say that the development of each
-has revealed something new that has lead to the next technology
-advancement in data services and data.  With the development of each technology
-we also discover limitations of that new technology, which in-turn leads to the
-next technological advancment.  For example, in industry, not long after SOAP
-and XML became primary tools in web API development, some people began to
-notice the difficulty in reading XML data in cases where developers need to
-confirm data requests or data responses.  One might argue that using XML as the
-data packet could have been an over extension of the use of XML in web
-services.  In the mid to late 2000s REST and JSON based web services began to
-take hold.  JSON may have been a better fit for web services and data mining
-because formatting data to comply with a JSON data format focuses more on the
-data itself than describing the data like XML does.  If true, and we conceed
-that the format of JSON data rendered for situations where developers are trying
-to test web services and the rendered data are easier to read then JSON may have
-been the next logical step in the evolution of web services.  
-
-Figure~\ref{f:wsdl-example}\cite{mycodde2016} is an example of the type of
-interface developers and web service data consumers had to understand in order
-to work effectively with SOAP/XML based web services.  Anyone trying to read
-the WSDL document had to not only understand the nuances of things like XML,
-namespacing, but also had to be able to understand how the web service's
-operations were defined int the WSDL document.
+and JSON have also leant themselves towards the development of web-based APIs.
 
 Figure~\ref{f:swaggerui-example}\cite{swaggerio2018} is example of a REST/JSON web service
-interface.  In comparison, it is easier to understand not only what proceedures
+interface.  In comparison, it seems easier to understand not only the proceedures
 or methods the service provides, but as Figure~\ref{f:swaggerui-expansion}\cite{swaggerio2018}
-demonstrates, it is easier to under stand the data types for the services input
+demonstrates, it is easier to understand the data types required for the services input
 parameters and resulting output data packets.  However, Figure~\ref{f:swagger-resp}\cite{swaggerresp2018}
 provides an example of service  response from a REST/JSON based service and
-although, visually, easier to understand compared XML.  It is challenging to
-understand the relationships between the data set's components.  
+although, visually, easier to understand compared XML.  It can be challenging 
+to understand the relationships between the data set's components.  
 
-\section{Figures}
+\section{GraphQL}
+``GraphQL is a query language constructed to facilitate the developmet of APIs``\cite{FacebookGraphQL2018}.
+GraphQL is meant to provide a complete and understandable description of the
+data in an API as well as allowing clients to ask for exactly what data is needed and
+nothing more than that\cite{FacebookGraphQL2018}.
 
-In Figure~\ref{f:fly} we show a fly. Please note that because we use
-just columwidth that the size of the figure will change to the
-columnwidth of the paper once we change the layout to final. Changing
-the layout to final should not be done by you. All figures will be
-listed at the end.  Please do not use phrases such as \textit{shown in
-  the figure below}. Instead use such as shown in Figure~\ref{f:fly}.
+An issue with both SOAP and REST based services is that once a remote
+proceedure is implemented both inputs and outputs are fixed.  In other words,
+a developer has to create the appropriate inputs and its required input values
+for an RPC call.  The remote proceedure produces a resulting data set with the
+exact same output fields each time.  For example, the developer instantiates an
+API call to retrieve a list of all users.  A single user has three attributes,
+first name, last name, and email address.  The resulting user list always has
+all three attributes.  However, what if the developer wants the same list of
+users, but only wants the first and last name attributes of each user.  GraphQL
+provides that flexibility.
 
-\begin{figure}[!ht]
-  \centering\includegraphics[width=\columnwidth]{../../hid-sample/tex/images/fly.pdf}
-  \caption{Example caption}\label{f:fly}
-\end{figure}
+Figure~\ref{:f:github-graphql-1} shows an example of a GraphQL query and the
+results using GithHub.com's GraphQL API.  Figure~\ref{:f:github-graphql-2} is an
+example of using GitHub's same GraphQL API, but requesting the list of licences
+excluding the nickname field.
 
-To avoid copying the example figure in each hid directory, we actually
-import it from the hid-sample directory. Lets assume you have a figure
-in the image directory called myfigure.pdf. You can than replace the
-line in the example with
-
-\begin{verbatim}
-\centering\includegraphics[width=\columnwidth]{images/myfigure.pdf}
-\end{verbatim}
-
-In case you use png than you must have a png that is at least 300dpi
-(find out what that means and how to do that) and use 
-
-\begin{verbatim}
-\centering\includegraphics[width=\columnwidth]{images/myotehrfigure.png}
-\end{verbatim}
-
-When modifying the example, please do not check in the images from the
-examples into your images directory as you will not need them for your
-paper. Instead use images that you like to include. If you do not have
-any images, do not palce anything in the images folder. However most
-technologies could benefit for one image. Make sure you do not
-plagiarize the image. Find out from the hand book how to do that. Any
-plagiarism of images will result that we return the paper without
-review as you have not understood how plagiarism works.
+A second issue that has been a challenge to manage in SOAP and REST based APIs
+has been versioning.  In a REST API, an endpoint for requesting users might look
+like:
+\begin{verbatim}http://somedomain.com/api/v1.0/users \end{verbatim}
+Over time the API might need to evolve and the next version of the equivalent
+user call might produce a data set that has slightly different attributes for
+the user. The new enpoint might look like:
+\begin{verbatim}http://somedomain.com/api/v2.0/users \end{verbatim}
+This versioning structure requires work to make sure the new version of the API
+is documented.  Effort is also required to make sure the previous version of the
+API is documented and there is good communication with API consumers so they
+know there are multiple versions of the API and the differences between those
+versions.  Simply stated, GraphQL does not create this situation.  If the domain
+model for the user object changes to include a new field (e.g., phone number),
+then the new field can be added to the model.  The GraphQL query schema can be
+adjusted for new field and anything that consumes that already accesses that 
+GraphQL query will continue to work.
 
 \section{Tables}
 
@@ -334,4 +345,14 @@ citations in the section.
 \begin{figure}[!ht]
   \centering\includegraphics[width=\columnwidth]{images/swaggerui_execute.png}
   \caption{Swagger UI Response}\label{f:swagger-resp}
+\end{figure}
+
+\begin{figure}[!ht]
+  \centering\includegraphics[width=\columnwidth]{images/github-graphql-1.png}
+  \caption{GitHub GraphQL Licenses Query}\label{f:github-graphql-1}
+\end{figure}
+
+\begin{figure}[!ht]
+  \centering\includegraphics[width=\columnwidth]{images/github-graphql-2.png}
+  \caption{GitHub GraphQL Licenses Query Without Nickname Field}\label{f:github-graphql-2}
 \end{figure}
