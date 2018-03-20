@@ -177,6 +177,15 @@ multiple calls have to be created to retrieve the related resources
 (i.e., addresses).  Also, the API developers have to develop and maintain 
 multiple API endpoints (i.e., user endpoint, addresses endpoint).
 
+A fourth feature that GraphQL offers that relates back to it being a single 
+(url) resource is efficieny.  Microservices and a microservice based 
+architecture has emerged as robust and popular format for delivering web 
+services.  Technically, the goal of a microservice is to keep the service small 
+and easy to maintain. REST based services tend to requrie multiple endpoints 
+that can be used for typical Create, Read, Update Delete (CRUD) operations.  
+GraphQL's single enpoint means that all CRUD operations are handled by a single 
+endpoint making the resources required to build and run the service smaller.
+
 \section{Conclusion}
 There have been very notable advances in data and service delivery since the 
 advent of the Internet and the Internet's integration into industry.  At the 
@@ -201,9 +210,14 @@ develop and maintain the documentation (metadata) and that service consumers
 have to expend effort to stay aware of changes to the services being consumed 
 in case a change occurs that might affect the clients accessing those services.
 
-Whose Using GraphQL Discussion Here
-Possible Mention to Microservices
-Info from other paper
+A slightly more rigorous way to gage whether GraphQL has traction for becoming 
+reliable part of web and data services infrastructure is to examine who is 
+using GraphQL.  According to the GraphQL website (graphql.org/users/), major 
+companies like Coursera, Facebook, GitHub, Intuit, Neo4j, Shopify, Twitter 
+and Yelp are using GraphQL\cite{GraphQLUsers2018}.  Assuming that most of these 
+organizations invesitage and research new technololgial tools before making the 
+tools part of their infrastructer, it may be reasonable to assume that GraphQL 
+has notable viability.
 
 Finally, in approximately 2016, developers at Facebook seemed to have 
 developed the next step forward in service and data delivery by addressing some 
