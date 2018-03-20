@@ -1,28 +1,10 @@
 # GraphQL
-\label{s:graphql}
-\index{GraphQL}
-
 Advanced Cloud Computing  
 Indiana University Data Science Program  
 Spring 2018  
+Averill Cate, Jr
 
 ## Introduction
-
-We are in the information age.  Possibly, the information overload age.
-Regradless, information or data are the commodity of this technological era.
-Given that a significant number, if not most of the world's industries are
-dependent on the internet and the exchange of data it is probably safe to
-assume that how the data are exchanged is an important thing to understand.
-It is probably import to also understand how the exchange mechanisms have been
-changing over time.
-
-In the early 2000s, Simple Object Access Protocol (SOAP) based web services 
-emerged as the preferred mechanism for exchanging data electronically.  
-Typically, SOAP was data exchange the protocol and eXtensible Markup Language 
-(XML) was the data format.
-
-Web services, why, history, soap/xml, rest/json, graphql, others...
-
 The purpose of this tutorial is to provide an example of using GraphQL as a 
 mechanism for creating and developing web APIs.
 
@@ -35,16 +17,16 @@ is in the tutorial's application code.
 
 ## Required Software
 
-+ python 3.x^*  
-+ pyenv^*  
++ python 3.x&#42;  
++ pyenv&#42;  
 + pyenv virtualenv  
 + graphene  
 + flask  
 + json server  
-+ pip^*  
-+ git^*  
-+ docker^*  
-+ text editor^*  
++ pip&#42;  
++ git&#42;  
++ docker&#42;  
++ text editor&#42;  
 
 ^* = installation not covered in the tutorial
 
@@ -65,15 +47,13 @@ is in the tutorial's application code.
 
 The preferred method for developing python based projects is to use a separate environment for each python project.  There are several ways to accomplish this.  The first is by creating a docker image and container for the project.  This is recommended, but not covered in this tutorial.  The second method is by installing and using pyenv's virtualenv plugin, this assumes the user has already installed and configured pyenv.
 
-**GVL: DO NOT USE NUMBERS HERE AS SECTION NUMBERS MUST STAY VARIABLE**
-
 ## Using Virtualenv
 
-First Access the command line. Next, install pyenv-virtualenv while following the instructions provided at 
+First, access the command line. Next, install pyenv-virtualenv while following the instructions provided at 
 
 * <https://github.com/pyenv/pyenv-virtualenv>
 
-Or better use our handbook and follow the instructions provided there. At the command prompt type:
+Or better, use our handbook and follow the instructions provided there. At the command prompt type:
 
 	git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
 	echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
@@ -103,9 +83,9 @@ We do this step to make sure you do not overwrite or modify your default python 
 
 	pip install flask  
 	pip install graphene  
+	pip install flask-graphql
 
-We now have the minimum environment to build a Python GraphQL server and client.  One last step though.  It is a good idea to keep track of 
-Python dependencies as we install them.  To do that, at the command line type:  
+We now have the minimum environment to build a Python GraphQL server and client.  One last step though.  It is a good idea to keep track of Python dependencies as we install them.  To do that, at the command line type:  
 
 	pip freeze > requirements.text
 
@@ -115,22 +95,34 @@ the python virtualenv or someone else does then once the virtualenv is created t
 	pip install -r requirements.txt
 
 ## Build a graphql Application
+Create and open a file namee run.py.  This will be a very simple application server that runs the demo application.  
 
-Build the server.py/app.py file
+Now import the dependencies that we installed using pip.
 
+	# File: run.py
+	from flask import Flask
+	from graphene import ObjectType, String, Schema
+	from flask_graphql import GraphQLView
 
+	class Query(ObjectType):
+		status = String(description='Check graphql service status')
+		def resolve_hello(self, args, context, info):
+			return 'OK'
+
+	view_func = GraphQLView.as_view('graphql', schema=Schema(query=Query))
+
+	app = Flask(__name__)
+	app.add_url_rule('/', view_func=view_func)
+
+	if __name__ == '__main__':
+		app.run()
+
+	Ref: #1
 
 ## Explore the Data
-
 Show the graphql explorer
 
-
-
 ## References
+1. Graphql Site - https://bcb.github.io/graphql/flask
 
-* Graphql site
 * Look in resources section of project README.md and include sites that discuss justifications for grapql
-
-## Optional
-
-liquidprompt

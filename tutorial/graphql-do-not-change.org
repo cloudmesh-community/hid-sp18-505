@@ -1,7 +1,4 @@
 * GraphQL
-  :PROPERTIES:
-  :CUSTOM_ID: graphql
-  :END:
 
 \label{s:graphql} \index{GraphQL}
 
@@ -10,9 +7,6 @@ Indiana University Data Science Program\\
 Spring 2018
 
 ** Introduction
-   :PROPERTIES:
-   :CUSTOM_ID: introduction
-   :END:
 
 We are in the information age. Possibly, the information overload age.
 Regradless, information or data are the commodity of this technological
@@ -42,40 +36,31 @@ However, the tutorial will provide guidance for installing the packages
 that is in the tutorial's application code.
 
 ** Required Software
-   :PROPERTIES:
-   :CUSTOM_ID: required-software
-   :END:
 
-- python 3.x\^*\\
-- pyenv\^*\\
-- pyenv virtualenv\\
-- graphene\\
-- flask\\
-- json server\\
-- pip\^*\\
-- git\^*\\
-- docker\^*\\
-- text editor\^*
+-  python 3.x\^*\\
+-  pyenv\^*\\
+-  pyenv virtualenv\\
+-  graphene\\
+-  flask\\
+-  json server\\
+-  pip\^*\\
+-  git\^*\\
+-  docker\^*\\
+-  text editor\^*
 
 \^* = installation not covered in the tutorial
 
 ** Assumptions
-   :PROPERTIES:
-   :CUSTOM_ID: assumptions
-   :END:
 
-- User knows how to work at the command line.
-- User has installed python 3+
-- User has installed and configured pyenv
-- User has installed and knows how to use a text editor like emacs, or
-  vscode.
-- Working on a Unix/Linux/OSX based operating system.
-- User has a .bashrc (using bash shell)
+-  User knows how to work at the command line.
+-  User has installed python 3+
+-  User has installed and configured pyenv
+-  User has installed and knows how to use a text editor like emacs, or
+   vscode.
+-  Working on a Unix/Linux/OSX based operating system.
+-  User has a .bashrc (using bash shell)
 
 ** Steps/Procedures
-   :PROPERTIES:
-   :CUSTOM_ID: stepsprocedures
-   :END:
 
 1. Install python 3.x - Assumed to have been completely by the user.
 2. Install pyenv - Assumed to have been completely by the user.
@@ -91,14 +76,11 @@ this assumes the user has already installed and configured pyenv.
 *GVL: DO NOT USE NUMBERS HERE AS SECTION NUMBERS MUST STAY VARIABLE*
 
 ** Using Virtualenv
-   :PROPERTIES:
-   :CUSTOM_ID: using-virtualenv
-   :END:
 
 First Access the command line. Next, install pyenv-virtualenv while
 following the instructions provided at
 
-- [[https://github.com/pyenv/pyenv-virtualenv]]
+-  [[https://github.com/pyenv/pyenv-virtualenv]]
 
 Or better use our handbook and follow the instructions provided there.
 At the command prompt type:
@@ -113,9 +95,6 @@ At the command prompt type:
 We now have a python virtualenv that is specifically for this project.
 
 ** Installing Graphql
-   :PROPERTIES:
-   :CUSTOM_ID: installing-graphql
-   :END:
 
 Before we start we create a a project folder and cd into it
 
@@ -168,31 +147,19 @@ issued the command:
 #+END_EXAMPLE
 
 ** Build a graphql Application
-   :PROPERTIES:
-   :CUSTOM_ID: build-a-graphql-application
-   :END:
 
 Build the server.py/app.py file
 
 ** Explore the Data
-   :PROPERTIES:
-   :CUSTOM_ID: explore-the-data
-   :END:
 
 Show the graphql explorer
 
 ** References
-   :PROPERTIES:
-   :CUSTOM_ID: references
-   :END:
 
-- Graphql site
-- Look in resources section of project README.md and include sites that
-  discuss justifications for grapql
+-  Graphql site
+-  Look in resources section of project README.md and include sites that
+   discuss justifications for grapql
 
 ** Optional
-   :PROPERTIES:
-   :CUSTOM_ID: optional
-   :END:
 
 liquidprompt
