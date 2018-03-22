@@ -50,6 +50,13 @@ Spring 2018
 # Week 9 Notes
 * 2018/03/11 Some work on paper.  
 * 2018/03/12 Small amount of work on paper.  
+* 2018/03/17 Work on paper.
+* 2018/03/18 Work on paper.
+
+# Week 10 Notes
+* 2018/03/19 Work on paper.
+* 2018/03/20 Completed work on paper and added a little more to the tutorial.
+* 2018/01/21 Tutorial work.
 
 # Todos
 * 2018/03/06 Checked on class status in Piazza.  Little busy this week with wife's birthday and work in another class.  
