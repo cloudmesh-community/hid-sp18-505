@@ -95,11 +95,11 @@ the python virtualenv or someone else does then once the virtualenv is created t
 	pip install -r requirements.txt
 
 ## Build a graphql Application
-Create and open a file named run.py.  This will be a very simple application server that runs the demo application.  
+Create and open a file named app.py.  This will be a very simple application server that runs the demo application.  
 
 Now import the dependencies that we installed using pip.
 
-	# File: run.py
+	# File: app.py
 	from flask import Flask
 	from graphene import ObjectType, String, Schema
 	from flask_graphql import GraphQLView
@@ -112,26 +112,56 @@ Now import the dependencies that we installed using pip.
 	view_func = GraphQLView.as_view('graphql', schema=Schema(query=Query))
 
 	app = Flask(__name__)
-	app.add_url_rule('/', view_func=view_func)
+	app.add_url_rule('/graphql', view_func=view_func)
 
-	@app.route('/)
+	@app.route('/')
 	def index():
 		return 'Hello!'
 
 	if __name__ == '__main__':
-		app.run(debug=TRUE)
+		app.run(debug=True)
 
 	Ref: #1
+
+If you copy and paste the code in app.py then you will have to make sure that the file has proper python indenting, otherwise 
+app.py will not run.
 
 Let's test to make sure the server application will run.  Access the command prompt in the project folder 
 and type ```python app.py```.
 
 The flask application should display information to the console that an application server has been started 
-on a local IP address and the server is listening on the default port 5000.
+on a local IP address and the server is listening on the default port, 5000.
 
 Open a web browser and connect to http://127.0.0.1:5000.  The browser should render a web page that displays
 the message "Hello!"
 
+We have already enabled the GraphQL endpoint by have the line in app.py that starts with "view_func".  Let's 
+confirm that the GraphQL query-builder user interface is working by browsing opening the url 
+http://127.0.0.1:5000/graphql in a browser window.
+
+The resulting user interface (UI) lets a user develop and test QraphQL queries against the server created in app.py. The GraphQL 
+UI has to panes.  The left pane is used to create a query and the 
+right pane displays the query output.  A query can be executed by 
+clicking the right-arrow (Run) button near the top of the UI.
+
+Let's build and run our first query.
+1. Click in the left pane
+2. Type "{" and press the Enter key
+3. Press the Control/Command key and the space bar at the same time.  This activates the UI's autocomplete feature.  The autocomplete feature knows about the query schema and can make it easier for the user to develop a query.
+4. The autocomplete will display the word "status".  Highlight the status word and press the Enter key.  The query should look similar to the follwoing:
+```
+{
+  status
+}
+```
+5. Click the Run button.  The query will run and display output that looks similar to the following:
+```
+{
+  "data": {
+    "status": "OK"
+  }
+}
+```
 
 ## Explore the Data
 Show the graphql explorer
