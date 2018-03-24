@@ -56,12 +56,9 @@ Spring 2018
 # Week 10 Notes
 * 2018/03/19 Work on paper.
 * 2018/03/20 Completed work on paper and added a little more to the tutorial.
-* 2018/01/21 Tutorial work.
-
-# Todos
-* 2018/03/06 Checked on class status in Piazza.  Little busy this week with wife's birthday and work in another class.  
-* 2018/03/06 Added makefile for Swagger project.  
-* 2018/03/07 Realized I should dockerize the client too.  
+* 2018/03/21 Tutorial work.
+* 2018/03/23 Term project web app work.
+* 2018/03/24 Tutorial work.
 
 ### Scratch Notes and Reminders
  - Left off on p. 80 in handbook.  
