@@ -95,7 +95,7 @@ the python virtualenv or someone else does then once the virtualenv is created t
 	pip install -r requirements.txt
 
 ## Build a graphql Application
-Create and open a file namee run.py.  This will be a very simple application server that runs the demo application.  
+Create and open a file named run.py.  This will be a very simple application server that runs the demo application.  
 
 Now import the dependencies that we installed using pip.
 
@@ -114,10 +114,24 @@ Now import the dependencies that we installed using pip.
 	app = Flask(__name__)
 	app.add_url_rule('/', view_func=view_func)
 
+	@app.route('/)
+	def index():
+		return 'Hello!'
+
 	if __name__ == '__main__':
-		app.run()
+		app.run(debug=TRUE)
 
 	Ref: #1
+
+Let's test to make sure the server application will run.  Access the command prompt in the project folder 
+and type ```python app.py```.
+
+The flask application should display information to the console that an application server has been started 
+on a local IP address and the server is listening on the default port 5000.
+
+Open a web browser and connect to http://127.0.0.1:5000.  The browser should render a web page that displays
+the message "Hello!"
+
 
 ## Explore the Data
 Show the graphql explorer
