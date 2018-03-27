@@ -86,16 +86,24 @@ used in conjunction with SOAP for data services\cite{Walsh1998}.  SOAP and XML
 are still widely used today.  In some cases, due to legacy systems and security
 concerns SOAP and XML are required for the use and development of data services.
 An example of XML is shown in Figure~\ref{f:xml-example}\cite{WikipidiaXML1028}.
+\begin{figure}[!ht]
+  \centering\includegraphics[width=\columnwidth]{images/xml-example.png}
+  \caption{SOAP/XML Example}\label{f:xml-example}
+\end{figure}
 An important point to note is, XML is a markup language, which can be
 interpreted as a meta-language.  XML serves to not only contain the data it
 delivered, but it also describes the data\cite{Aihkisalo2012}.
 
 Figure~\ref{f:wsdl-example}\cite{mycodde2016} is an example of the type of
 interface developers and web service data consumers had to understand in order
-to work effectively with SOAP/XML based web services.  Anyone trying to read
-the WSDL document had to not only understand the nuances of things like XML,
-name-spacing, but also had to be able to understand how the web service's
-operations were defined in the WSDL document.
+to work effectively with SOAP/XML based web services.  
+\begin{figure}[!ht]
+  \centering\includegraphics[width=\columnwidth]{images/wsdl-example.jpg}
+  \caption{WSDL Example}\label{f:wsdl-example}
+\end{figure}
+Anyone trying to read the WSDL document had to not only understand the nuances 
+of things like XML, name-spacing, but also had to be able to understand how the 
+web service's operations were defined in the WSDL document.
 
 \section{REST and JSON}
 Pautasso\cite{Pautasso2008} define REST as Representational State
@@ -105,25 +113,45 @@ Fielding developed REST in order to propose a framework for and architecture
 that can be used in ``network-based application software``\cite{Fielding2000}.
 Fielding's work on REST occurred around 2000, but it has only been in the last
 few years that we have seen the widespread implementation of REST.
-Figure~\ref{f:rest-example} we show an example of a REST/JSON data packet.  The
-example could be the output from a query to a RESTful web service or the input
-to be delivered to a RESTful web service that is meant to create our update data.
-JSON in comparison to XML is not a markup language.  In comparison to XML, JSON
-is the data with some defining attributes, but it his little, if any, meta-data
-that describe the data itself.  As an example, a JSON data packet might have a
-list of users where each user object or item has a first name attribute, last
-name attribute and an email address attribute with values for each of those
-attributes, but the data packet itself, does not describe the data format.  REST
-and JSON have also leant themselves towards the development of web-based APIs.
+Figure~\ref{f:rest-example} we show an example of a REST/JSON data packet.  
+\begin{figure}[!ht]
+  \centering\includegraphics[width=\columnwidth]{images/json-rest-example.png}
+  \caption{REST/JSON Example}\label{f:rest-example}
+\end{figure}
+The example could be the output from a query to a RESTful web service or the 
+input to be delivered to a RESTful web service that is meant to create our update 
+data.  JSON in comparison to XML is not a markup language.  In comparison to XML, 
+JSON is the data with some defining attributes, but it his little, if any, 
+meta-data that describe the data itself.  As an example, a JSON data packet 
+might have a list of users where each user object or item has a first name 
+attribute, last name attribute and an email address attribute with values for 
+each of those attributes, but the data packet itself, does not describe the data 
+format.  REST and JSON have also leant themselves towards the development of 
+web-based APIs.
 
 Figure~\ref{f:swaggerui-example}\cite{swaggerio2018} is example of a REST/JSON web service
-interface.  In comparison, it seems easier to understand not only the procedures
+interface.  
+\begin{figure}[!ht]
+  \centering\includegraphics[width=\columnwidth]{images/swaggerui.png}
+  \caption{Swagger UI Example}\label{f:swaggerui-example}
+\end{figure}
+In comparison, it seems easier to understand not only the procedures
 or methods the service provides, but as Figure~\ref{f:swaggerui-expansion}\cite{swaggerio2018}
 demonstrates, it is easier to understand the data types required for the services input
-parameters and resulting output data packets.  However, Figure~\ref{f:swagger-resp}\cite{swaggerresp2018}
-provides an example of service  response from a REST/JSON based service and
-although, visually, easier to understand compared XML.  It can be challenging 
-to understand the relationships between the data set's components.  
+parameters and resulting output data packets.  
+\begin{figure}[!ht]
+  \centering\includegraphics[width=\columnwidth]{images/swaggerui-expansion.png}
+  \caption{Swagger UI Expanded}\label{f:swaggerui-expansion}
+\end{figure}
+However, Figure~\ref{f:swagger-resp}\cite{swaggerresp2018} provides an example 
+of service response from a REST/JSON based service and although, visually, 
+easier to understand compared XML.  
+\begin{figure}[!ht]
+  \centering\includegraphics[width=\columnwidth]{images/swaggerui_execute.png}
+  \caption{Swagger UI Response}\label{f:swagger-resp}
+\end{figure}
+It can be challenging to understand the relationships between the data set's 
+components.
 
 \section{GraphQL}
 ``GraphQL is a query language constructed to facilitate the development of APIs``\cite{FacebookGraphQL2018}.
@@ -146,9 +174,18 @@ users, but only wants the first and last name attributes of each user.  GraphQL
 provides that flexibility.
 
 Figure~\ref{f:github-graphql-1} shows an example of a GraphQL query and the
-results using GithHub.com's GraphQL API.  Figure~\ref{f:github-graphql-2} is an
+results using GithHub.com's GraphQL API.  
+\begin{figure}[!ht]
+  \centering\includegraphics[width=\columnwidth]{images/github-graphql-1.png}
+  \caption{GitHub GraphQL Licenses Query}\label{f:github-graphql-1}
+\end{figure}
+Figure~\ref{f:github-graphql-2} is an
 example of using GitHub's same GraphQL API, but requesting the list of licenses
 excluding the nickname field.
+\begin{figure}[!ht]
+  \centering\includegraphics[width=\columnwidth]{images/github-graphql-2.png}
+  \caption{GitHub GraphQL Licenses Query Without Nickname Field}\label{f:github-graphql-2}
+\end{figure}
 
 A second issue that has been a challenge to manage in SOAP and REST based APIs
 has been versioning.  In a REST API, an endpoint for requesting users might look
@@ -220,10 +257,15 @@ GraphQL has notable viability.
 
 Figure~\ref{f:network-response}\cite{VzquezIngelmo2017ImprovingTO} also 
 provides data that could support the choice of using GraphQL as a part of a 
-services system architecture.  The table indicates that GraphQL performance may 
-be better than REST.  GraphQL has an almost 50 percent performance increase.  
-Serious architecture related decisions would require checking the constraints 
-of the test and repeating the tests for verification.
+services system architecture.  
+\begin{figure}[!ht]
+  \centering\includegraphics[width=\columnwidth]{images/network-response-times.png}
+  \caption{GraphQL and REST Network Response Times}\label{f:network-response}
+\end{figure}
+The table indicates that GraphQL performance may be better than REST.  GraphQL 
+has an almost 50 percent performance increase.  Serious architecture related 
+decisions would require checking the constraints of the test and repeating the 
+tests for verification.
 
 Finally, in approximately 2016, developers at Facebook seemed to have 
 developed the next step forward in service and data delivery by addressing some 
@@ -248,48 +290,3 @@ facilitate understanding the data and services provided by the API.
 
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{report} 
-
-\begin{figure}[!ht]
-  \centering\includegraphics[width=\columnwidth]{images/xml-example.png}
-  \caption{SOAP/XML Example}\label{f:xml-example}
-\end{figure}
-
-\begin{figure}[!ht]
-  \centering\includegraphics[width=\columnwidth]{images/json-rest-example.png}
-  \caption{REST/JSON Example}\label{f:rest-example}
-\end{figure}
-
-\begin{figure}[!ht]
-  \centering\includegraphics[width=\columnwidth]{images/wsdl-example.jpg}
-  \caption{WSDL Example}\label{f:wsdl-example}
-\end{figure}
-
-\begin{figure}[!ht]
-  \centering\includegraphics[width=\columnwidth]{images/swaggerui.png}
-  \caption{Swagger UI Example}\label{f:swaggerui-example}
-\end{figure}
-
-\begin{figure}[!ht]
-  \centering\includegraphics[width=\columnwidth]{images/swaggerui-expansion.png}
-  \caption{Swagger UI Expanded}\label{f:swaggerui-expansion}
-\end{figure}
-
-\begin{figure}[!ht]
-  \centering\includegraphics[width=\columnwidth]{images/swaggerui_execute.png}
-  \caption{Swagger UI Response}\label{f:swagger-resp}
-\end{figure}
-
-\begin{figure}[!ht]
-  \centering\includegraphics[width=\columnwidth]{images/github-graphql-1.png}
-  \caption{GitHub GraphQL Licenses Query}\label{f:github-graphql-1}
-\end{figure}
-
-\begin{figure}[!ht]
-  \centering\includegraphics[width=\columnwidth]{images/github-graphql-2.png}
-  \caption{GitHub GraphQL Licenses Query Without Nickname Field}\label{f:github-graphql-2}
-\end{figure}
-
-\begin{figure}[!ht]
-  \centering\includegraphics[width=\columnwidth]{images/network-response-times.png}
-  \caption{GraphQL and REST Network Response Times}\label{f:network-response}
-\end{figure}
