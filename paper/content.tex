@@ -40,7 +40,7 @@ For clarity, this paper focuses on data services technologies that have emerged
 since 2000 and the advent of Web 2.0 and in particular the data mining and
 data sciences explosion that is taking place across the globe.
 
-``Web services evolved from the Remote Procedure Call (RPC) mechanism.``\cite{Kalin2009}.  
+``Web services evolved from the Remote Procedure Call (RPC) mechanism.``\cite{hid505Kalin2009}.  
 The development of web services is meant to address a distributed computing 
 environment, where data might be stored on one system, applications consuming 
 or processing that data might be stored on a second system and clients that 
@@ -48,7 +48,7 @@ render data are on systems like desktop computers, mobile devices or other
 machines further process that data.  All of these systems are linked together, 
 typically via some sort of network and an RPC system provides a mechanism so 
 that both the data and procedures that can be used on that data are 
-discoverable\cite{Kalin2009}.
+discoverable\cite{hid505Kalin2009}.
 
 SOAP and XML, REST and JSON have been part of the progression of the development
 of web services and web Application Programming Interfaces (API).  Some might 
@@ -77,24 +77,24 @@ formats that exist.  However, both protocols and all three formats are widely
 used in academia and industry today and merit discussion.  
 
 \section{SOAP and XML}
-SOAP is a XML-based data exchange protocol\cite{Quaine2007}.  SOAP stands for
-``Simple Object Access Protocol``\cite{Microsoft2018}.  SOAP is a lightweight
+SOAP is a XML-based data exchange protocol\cite{hid505Quaine2007}.  SOAP stands for
+``Simple Object Access Protocol``\cite{hid505Microsoft2018}.  SOAP is a lightweight
 protocol that, simply stated, is extensible and designed to facilitate the
-exchange of structured data between disparate systems\cite{Microsoft2018}.
+exchange of structured data between disparate systems\cite{hid505Microsoft2018}.
 Extensible Markup Language (XML) is the structured data format that has been
-used in conjunction with SOAP for data services\cite{Walsh1998}.  SOAP and XML
+used in conjunction with SOAP for data services\cite{hid505Walsh1998}.  SOAP and XML
 are still widely used today.  In some cases, due to legacy systems and security
 concerns SOAP and XML are required for the use and development of data services.
-An example of XML is shown in Figure~\ref{f:xml-example}\cite{WikipidiaXML1028}.
+An example of XML is shown in Figure~\ref{f:xml-example}\cite{hid505WikipidiaXML1028}.
 \begin{figure}[!ht]
   \centering\includegraphics[width=\columnwidth]{images/xml-example.png}
   \caption{SOAP/XML Example}\label{f:xml-example}
 \end{figure}
 An important point to note is, XML is a markup language, which can be
 interpreted as a meta-language.  XML serves to not only contain the data it
-delivered, but it also describes the data\cite{Aihkisalo2012}.
+delivered, but it also describes the data\cite{hid505Aihkisalo2012}.
 
-Figure~\ref{f:wsdl-example}\cite{mycodde2016} is an example of the type of
+Figure~\ref{f:wsdl-example}\cite{hid505mycodde2016} is an example of the type of
 interface developers and web service data consumers had to understand in order
 to work effectively with SOAP/XML based web services.  
 \begin{figure}[!ht]
@@ -106,11 +106,11 @@ of things like XML, name-spacing, but also had to be able to understand how the
 web service's operations were defined in the WSDL document.
 
 \section{REST and JSON}
-Pautasso\cite{Pautasso2008} define REST as Representational State
+Pautasso\cite{hid505Pautasso2008} define REST as Representational State
 Transfer.  REST was designed by Roy Fielding as part of his doctoral
-dissertation while attending the University of California, Irvine\cite{Fielding2000}.
+dissertation while attending the University of California, Irvine\cite{hid505Fielding2000}.
 Fielding developed REST in order to propose a framework for and architecture
-that can be used in ``network-based application software``\cite{Fielding2000}.
+that can be used in ``network-based application software``\cite{hid505Fielding2000}.
 Fielding's work on REST occurred around 2000, but it has only been in the last
 few years that we have seen the widespread implementation of REST.
 Figure~\ref{f:rest-example} we show an example of a REST/JSON data packet.  
@@ -129,21 +129,21 @@ each of those attributes, but the data packet itself, does not describe the data
 format.  REST and JSON have also leant themselves towards the development of 
 web-based APIs.
 
-Figure~\ref{f:swaggerui-example}\cite{swaggerio2018} is example of a REST/JSON web service
+Figure~\ref{f:swaggerui-example}\cite{hid505swaggerio2018} is example of a REST/JSON web service
 interface.  
 \begin{figure}[!ht]
   \centering\includegraphics[width=\columnwidth]{images/swaggerui.png}
   \caption{Swagger UI Example}\label{f:swaggerui-example}
 \end{figure}
 In comparison, it seems easier to understand not only the procedures
-or methods the service provides, but as Figure~\ref{f:swaggerui-expansion}\cite{swaggerio2018}
+or methods the service provides, but as Figure~\ref{f:swaggerui-expansion}\cite{hid505swaggerio2018}
 demonstrates, it is easier to understand the data types required for the services input
 parameters and resulting output data packets.  
 \begin{figure}[!ht]
   \centering\includegraphics[width=\columnwidth]{images/swaggerui-expansion.png}
   \caption{Swagger UI Expanded}\label{f:swaggerui-expansion}
 \end{figure}
-However, Figure~\ref{f:swagger-resp}\cite{swaggerresp2018} provides an example 
+However, Figure~\ref{f:swagger-resp}\cite{hid505swaggerresp2018} provides an example 
 of service response from a REST/JSON based service and although, visually, 
 easier to understand compared XML.  
 \begin{figure}[!ht]
@@ -154,13 +154,13 @@ It can be challenging to understand the relationships between the data set's
 components.
 
 \section{GraphQL}
-``GraphQL is a query language constructed to facilitate the development of APIs``\cite{FacebookGraphQL2018}.
+``GraphQL is a query language constructed to facilitate the development of APIs``\cite{hid505FacebookGraphQL2018}.
 GraphQL is meant to provide a complete and understandable description of the
 data in an API as well as allowing clients to ask for exactly what data is 
-needed and nothing more than that\cite{FacebookGraphQL2018}.  GraphQL was 
+needed and nothing more than that\cite{hid505FacebookGraphQL2018}.  GraphQL was 
 developed by Facebook to address Facebook's need for having an API that could 
 retrieve and describe all of Facebook's data while keeping the API simple to 
-learn and use\cite{Byron2015}.
+learn and use\cite{hid505Byron2015}.
 
 An issue with both SOAP and REST based services is that once a remote
 procedure is implemented both inputs and outputs are fixed.  In other words,
@@ -206,7 +206,7 @@ adjusted for new field and anything that consumes that already accesses that
 GraphQL query will continue to work.
 
 A third issue that GraphQL addresses that can be viewed as a challenge in SOAP 
-or REST services is accessing related resources in single requests\cite{FacebookGraphQL2018}.  
+or REST services is accessing related resources in single requests\cite{hid505FacebookGraphQL2018}.  
 Typically in REST or SOAP, if a user object had a one-to-many relationship to 
 an address object and an API consumer wanted to get a user's address data then 
 multiple calls have to be created to retrieve the related resources 
@@ -250,12 +250,12 @@ A slightly more rigorous way to gage whether GraphQL has traction for becoming
 reliable part of web and data services infrastructure is to examine who is 
 using GraphQL.  According to the GraphQL website (graphql.org/users/), major 
 companies like Coursera, Facebook, GitHub, Intuit, Neo4j, Shopify, Twitter 
-and Yelp are using GraphQL\cite{GraphQLUsers2018}.  Assuming that most of these 
+and Yelp are using GraphQL\cite{hid505GraphQLUsers2018}.  Assuming that most of these 
 organizations investigate and research new technological tools before making 
 the tools part of their infrastructure, it may be reasonable to assume that 
 GraphQL has notable viability.
 
-Figure~\ref{f:network-response}\cite{VzquezIngelmo2017ImprovingTO} also 
+Figure~\ref{f:network-response}\cite{hid505VzquezIngelmo2017ImprovingTO} also 
 provides data that could support the choice of using GraphQL as a part of a 
 services system architecture.  
 \begin{figure}[!ht]
