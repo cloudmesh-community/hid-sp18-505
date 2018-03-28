@@ -27,7 +27,7 @@ is in the tutorial's application code.
 + git&#42;  
 + text editor&#42;  
 
-^* = installation not covered in the tutorial
+^* = Installation not covered in the tutorial
 
 ## Assumptions
 
@@ -78,7 +78,7 @@ This makes sure we are using the local python  development virtualenv and not th
 	pip freeze 
 
 which should *not* display a list of libraries since our virtualenv was just created.  
-We do this step to make sure you do not overwrite or modify your default python environment. Now install flask and graohene:
+We do this step to make sure you do not overwrite or modify your default python environment. Now install flask and graphene:
 
 	pip install flask  
 	pip install graphene  
@@ -260,10 +260,10 @@ Here is the final app.py file.
 	import graphene
 	from graphene.relay import Node
 
-	# See ref: 3
+	# See reference: 3
 	connection = connect('mongoenginetest', host='mongomock://localhost')
 
-	# See ref: 3
+	# See reference: 3
 	class TestObject(Document):
 		param = StringField()
 
@@ -279,14 +279,19 @@ Here is the final app.py file.
 			interfaces = (Node,)
 
 	class Query(ObjectType):
+		""" See: reference 1
+		"""
+	
 		status = String(description='Check graphql service status')
 		all_test_objects = MongoengineConnectionField(TestObjectMongoengineOjbectType)
 
 		def resolve_status(self, args):
 			return 'OK'
 
+    # See reference 1
 	view_func = GraphQLView.as_view('graphql', schema=Schema(query=Query), graphiql=True)
 
+    # See reference 1
 	app = Flask(__name__)
 	app.add_url_rule('/graphql', view_func=view_func)
 
