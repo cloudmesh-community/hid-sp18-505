@@ -60,5 +60,8 @@ Spring 2018
 * 2018/03/23 Term project web app work.
 * 2018/03/24 Tutorial work.
 
+# Week 11 Notes
+* 2018/04/01 Did a great deal of programming in the class project application.  Have built a graphql api and rest api for the application.  See: https://github.com/acatejr/eapi  
+
 ### Scratch Notes and Reminders
  - Left off on p. 80 in handbook.  
