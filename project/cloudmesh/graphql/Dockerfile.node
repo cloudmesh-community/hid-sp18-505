@@ -1,7 +1,0 @@
-FROM node:latest
-EXPOSE 4000
-
-WORKDIR /opt/app
-COPY ./client/src /opt/app/src
-COPY ./client/package.json /opt/app/package.json
-RUN npm install
