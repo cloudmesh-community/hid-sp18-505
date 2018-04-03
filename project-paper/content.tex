@@ -1,0 +1,93 @@
+% status: 0
+% chapter: TBD
+
+\title{GraphQL and Web APIs}
+
+\author{Averill Cate, Jr}
+\orcid{1234-5678-9012}
+\affiliation{%
+  \institution{The University of Indiana}
+  \streetaddress{}
+  \city{Bloomington} 
+  \state{Indiana} 
+  \postcode{47408}
+}
+\email{acate@iu.edu}
+
+\author{Gregor von Laszewski}
+\affiliation{%
+  \institution{Indiana University}
+  \streetaddress{Smith Research Center}
+  \city{Bloomington} 
+  \state{IN} 
+  \postcode{47408}
+  \country{USA}}
+\email{laszewski@gmail.com}
+
+% The default list of authors is too long for headers}
+\renewcommand{\shortauthors}{G. v. Laszewski}
+
+\begin{abstract}
+This project is for Advanced Cloud Computing, Indiana University Spring 
+Semester 2018.  Through this project, we will demonstrate the use of GraphQL \cite{hid505FacebookGraphQL2018}
+and cloud computing services as a means for constructing and delivering web 
+services.  The project will rely on The Santa Rita  Experimental Range (SRER) 
+website and data sets maintained by the Univeristy of Arizona and second, 
+related web site, the Walnut Gulch Experimental Watershed (WGEW) Online Data 
+Access, maintained by the United States Department of Agriculure's, Agriculure 
+Research Service (ARS).  Neither of these existing sites provide modernized 
+data services, yet both sites provide potentiall valuable data to the research 
+community.  
+
+\end{abstract}
+
+\keywords{hid-sp18-505, GraphQL, Web, Services}
+
+\maketitle
+
+\section{Introduction and Project Outline}
+The Santa Rita Experimental is an experimental range currently maintained by 
+the University of Arizona.  The experimental range was the first of its kind 
+and was established in 1902 \cite{SrerWebSite2018}.  The SRER website, in its 
+current state is not structured to deliver data as a service.
+
+The Walnut Gulch Experimental Watershed is also an outdoor research facility 
+located in southestern Arizona \cite{WgewWebSite2018}.  Like the SRER site, 
+the WGEW preicpitation and runoff data site is not structured to delivered as 
+services.
+
+The general outline for this paper is:
+
+\begin{enumerate}
+\item Use web scraping tools to download, parse and clean existing data from each 
+site.  
+\item Load the data into a database.  
+\item Develop a small web application to provide two web services.  The two 
+services will deliver the same data.  However, one of the services will use 
+GraphQL to deliver data and the other will use REST \cite{}hid505swaggerio2018 to 
+deliver its data. 
+\item Develop a simple load testing tool that will be used to determine 
+performance metrics for both services and compare the results of the load tests.
+\item Create a simple Amazon Lambda service that will compute some metric related to 
+the preciption/runoff data.  The purpose is to demonstrate how cloud services can 
+be used to off-load costs and dependencies on a distributed system like the one 
+proposed in this project.
+\item Develop a 3-node Raspberry Pi cluster to host the application.  The purpose 
+of this, is to demonstrate how a system like this one can be hosted and deployed 
+on hardware infrastructure that is cheap and relatively simple to maintain.
+\end{enumerate}
+
+\section{Conclusion}
+The conclusion will go here.
+
+\begin{acks}
+
+  The authors would like to thank Dr.~Gregor~von~Laszewski for his support and 
+  suggestions to write this paper.
+  
+\end{acks}
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{report} 
+
+https://www.tucson.ars.ag.gov/dap/
