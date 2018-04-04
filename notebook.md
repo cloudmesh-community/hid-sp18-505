@@ -65,6 +65,7 @@ Spring 2018
 
 # Week 12 Notes
 * 2018/04/01 Started project paper by writing proposal/outline in paper.  
+* 2018/04/02 Progress on project paper running through make check.  Produces pdf.  
 
 ### Scratch Notes and Reminders
  - Left off on p. 80 in handbook.  
