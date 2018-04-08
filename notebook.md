@@ -67,5 +67,9 @@ Spring 2018
 * 2018/04/01 Started project paper by writing proposal/outline in paper.  
 * 2018/04/02 Progress on project paper running through make check.  Produces pdf.  
 
+# Week 13 Notes
+* 2018/04/07 Dockerized entire graphql application.  
+* 2018/04/08 Some writing in final report in introduction section.  Please note this is the [link](https://github.com/acatejr/eapi) to the source code github repository.  
+
 ### Scratch Notes and Reminders
  - Left off on p. 80 in handbook.  

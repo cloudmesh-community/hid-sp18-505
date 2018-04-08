@@ -46,21 +46,59 @@ sites provide potentiall valuable data to the research community.
 \maketitle
 
 \section{Introduction}
-The Santa Rita Experimental is an experimental range currently maintained by 
-the University of Arizona.  The experimental range was the first of its kind 
-and was established in 1902\cite{SrerWebSite2018}.  The SRER website, in its 
-current state is not structured to deliver data as a service.
+What is GraphQL?  GraphQL is a query language for web application programer 
+interfaces (APIs)\cite{hid505FacebookGraphQL2018}.  There have been been 
+many other tools and methods used to develop APIs in the past.  Some of those 
+older tools are XML and SOAP, JSON and REST, plain old text or comma separated 
+files.  What makes GraphQL so different?  First, as the name implies, GraphQL, 
+is a query language.  This is different compared to SOAP/XML and Swagger/REST 
+in that those tools are a combination of data format and transport protocol.  
 
-The Walnut Gulch Experimental Watershed is also an outdoor research facility 
-located in southestern Arizona\cite{WgewWebSite2018}.  Like the SRER site, 
-the WGEW preicpitation and runoff data site is not structured to delivered as 
-services.
+Typically, SOAP/XML and Swagger/REST APIs are structured so that the API user 
+needs to review the specifications for interacting with the API.  For example, 
+what functions or endpoints are available?  What are the parameters for those 
+functions and what data types apply to each parameter?  GraphQL is different 
+in that it provides a mechanism where an API becomes a domain specific language 
+(DSL).  This means that API consumers can focus on developing transactions with 
+the API based on the data domain of the API.  For example, a GraphQL API for 
+stock data would allow API users to format queries something like the 
+following: 
+\begin{verbatim}
+{
+   all_stocks {
+     symbol, price, date
+}
+\end{verbatim}
+In this example we see a query request to a GraphQL API that is asking for all 
+stock data with respective symbol, price, an date.  Alternatively, a REST based 
+query might look like the following:
+\begin{verbatim}
+http://server.host.com/api/v1/allstocks
+\end{verbatim}
+In the REST based request we see information related to where the data are being
+requested from, the protocol used to make the request, the API version and finally,
+what the request is really after, all stock data.  The latter could be 
+considered more  understandble to programmers or even to someone who is 
+technically a advanced web users, but compared to the REST request, the GraphQL 
+based request has a format more closely resembling the data intself and is less 
+concered with how the data are requested.
 
-The general outline for this paper is:
+A useful way to demonstrate the uses of GraphQL would be to apply GraphQL to the 
+development of a real-world API that will transform existing web-based data sources 
+created and maintained at United Stated Deparment of Agriculture web site and 
+the University of Arizona.  The first data resource is the Santa Rita Experimental 
+which is an experimental range currently maintained by the University of Arizona.  
+The experimental range was the first of its kind and was established in 
+1902\cite{SrerWebSite2018}.  The SRER website, in its current state is not 
+structured to deliver data as a service.  The second data source is the Walnut 
+Gulch Experimental Watershed is also an outdoor research facility located in 
+southestern Arizona\cite{WgewWebSite2018}.  Like the SRER site, the WGEW 
+preicpitation and runoff data site is not structured to delivered as services.
 
+
+\textbf{General outline of the proceedures for developing the API}
 \begin{enumerate}
-\item Use web scraping tools to download, parse and clean existing data from 
-each site.  
+\item Web scraping existing data source to download, parse and clean existing data.
 \item Load the data into a database.  
 \item Develop a small web application to provide two web services.  The two 
 services will deliver the same data.  However, one of the services will use 
