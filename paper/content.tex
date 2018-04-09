@@ -37,15 +37,16 @@ For clarity, this paper focuses on data services technologies that have emerged
 since 2000 and the advent of Web 2.0 and in particular the data mining and
 data sciences explosion that is taking place across the globe.
 
-``Web services evolved from the Remote Procedure Call (RPC) mechanism.``\cite{hid505Kalin2009}.  
-The development of web services is meant to address a distributed computing 
-environment, where data might be stored on one system, applications consuming 
-or processing that data might be stored on a second system and clients that 
-render data are on systems like desktop computers, mobile devices or other 
-machines further process that data.  All of these systems are linked together, 
-typically via some sort of network and an RPC system provides a mechanism so 
-that both the data and procedures that can be used on that data are 
-discoverable\cite{hid505Kalin2009}.
+``Web services evolved from the Remote Procedure Call (RPC)
+mechanism''\cite{hid505Kalin2009}.  The development of web services is
+meant to address a distributed computing environment, where data might
+be stored on one system, applications consuming or processing that
+data might be stored on a second system and clients that render data
+are on systems like desktop computers, mobile devices or other
+machines further process that data.  All of these systems are linked
+together, typically via some sort of network and an RPC system
+provides a mechanism so that both the data and procedures that can be
+used on that data are discoverable\cite{hid505Kalin2009}.
 
 SOAP and XML, REST and JSON have been part of the progression of the development
 of web services and web Application Programming Interfaces (API).  Some might 
@@ -75,7 +76,7 @@ used in academia and industry today and merit discussion.
 
 \section{SOAP and XML}
 SOAP is a XML-based data exchange protocol\cite{hid505Quaine2007}.  SOAP stands for
-``Simple Object Access Protocol``\cite{hid505Microsoft2018}.  SOAP is a lightweight
+\emph{Simple Object Access Protocol}\cite{hid505Microsoft2018}.  SOAP is a lightweight
 protocol that, simply stated, is extensible and designed to facilitate the
 exchange of structured data between disparate systems\cite{hid505Microsoft2018}.
 Extensible Markup Language (XML) is the structured data format that has been
@@ -107,7 +108,7 @@ Pautasso\cite{hid505Pautasso2008} define REST as Representational State
 Transfer.  REST was designed by Roy Fielding as part of his doctoral
 dissertation while attending the University of California, Irvine\cite{hid505Fielding2000}.
 Fielding developed REST in order to propose a framework for and architecture
-that can be used in ``network-based application software``\cite{hid505Fielding2000}.
+that can be used in \emph{network-based application software}\cite{hid505Fielding2000}.
 Fielding's work on REST occurred around 2000, but it has only been in the last
 few years that we have seen the widespread implementation of REST.
 Figure~\ref{f:rest-example} we show an example of a REST/JSON data packet.  
@@ -151,13 +152,14 @@ It can be challenging to understand the relationships between the data set's
 components.
 
 \section{GraphQL}
-``GraphQL is a query language constructed to facilitate the development of APIs``\cite{hid505FacebookGraphQL2018}.
-GraphQL is meant to provide a complete and understandable description of the
-data in an API as well as allowing clients to ask for exactly what data is 
-needed and nothing more than that\cite{hid505FacebookGraphQL2018}.  GraphQL was 
-developed by Facebook to address Facebook's need for having an API that could 
-retrieve and describe all of Facebook's data while keeping the API simple to 
-learn and use\cite{hid505Byron2015}.
+``GraphQL is a query language constructed to facilitate the
+development of APIs''\cite{hid505FacebookGraphQL2018}.  GraphQL is
+meant to provide a complete and understandable description of the data
+in an API as well as allowing clients to ask for exactly what data is
+needed and nothing more than that\cite{hid505FacebookGraphQL2018}.
+GraphQL was developed by Facebook to address Facebook's need for
+having an API that could retrieve and describe all of Facebook's data
+while keeping the API simple to learn and use\cite{hid505Byron2015}.
 
 An issue with both SOAP and REST based services is that once a remote
 procedure is implemented both inputs and outputs are fixed.  In other words,
