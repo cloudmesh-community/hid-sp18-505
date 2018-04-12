@@ -4,6 +4,8 @@ all: clean start-docker
 clean:
 	@echo "Cleaning .pyc files"
 	rm -rf *.pyc
+	touch .env
 
 start-docker:
 	@echo "Starting docker."
+	docker-compose up -d --build
