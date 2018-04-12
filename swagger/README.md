@@ -5,7 +5,7 @@ This project tries to follow [The Twelve-Factor App](https://12factor.net/) phil
 If docker is installed the entire application should run by running:  
 `
 docker-compose up -d --build
-`
+`  
 Assuming you are in the root of the project.  
 
 To see the Swgger UI visit http://127.0.0.1:5000/apidocs
