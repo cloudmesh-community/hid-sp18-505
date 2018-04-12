@@ -2,7 +2,7 @@
 
 # General
 If docker is installed the entire application should run by running:
-
+This project tries to follow [The Twelve-Factor App](https://12factor.net/) philosophy.  
 `
 docker-compose up -d --build
 `
