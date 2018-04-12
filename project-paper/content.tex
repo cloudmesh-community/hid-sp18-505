@@ -106,10 +106,7 @@ Arizona\cite{WgewWebSite2018}.  Like the SRER site, the WGEW
 preicpitation and runoff data site is not structured to delivered as
 services.
 
-\TODO{you do not use textbf in the text but use section, subsectuion
-  or paragraph, or description}
-
-\textbf{General outline of the proceedures for developing the API}
+\subsection{General Outline}
 
 \begin{enumerate}
 \item Web scraping existing data source to download, parse and clean
@@ -157,29 +154,56 @@ made machine readible by creating web services to deliver the data.
   \caption{SRER Precipitation Data Page \cite{hid505SrerWebSite2018}}\label{f:srer_precip_data_page}
 \end{figure}
 
-The data sets downloaded for this demonstration were the raingage UTM 
-coordinate data files and the Excel file that contained all of the preciption 
-data for the respective raingages.  Some of the raingage data had to be cleaned 
-mostly due to typographical errors and the UTM coordinates had to be 
-converated to latitude and longitude values in case the data are rendered in 
-mapping applications.
+\section{Data Loading}
+The data sets downloaded for this demonstration were the raingage (Universal 
+Transverse Mercator (UTM) coordinate data files and the Excel file that 
+contained all of the preciption data for the respective raingages.  Some of 
+the raingage data had to be cleaned mostly due to typographical errors and the 
+UTM coordinates had to be converated to latitude and longitude values in case 
+the data are rendered in mapping applications.
 
-\section{GraphQL API}
-Content on GraphQL
+The precipitation data had to be converted from an Excel file to a CSV file 
+and the value delimiter was changed from a comma to the pipe symbol.  The 
+reason for this is because the comma can occur in some of the descriptive text 
+data for raingages, where as the pipe symbol is typically not used in written 
+English.
 
-\section{REST/Swagger API}
-Content on REST/Swagger here.
+\section{Web API Development}
+After the data were prepared for import into a database, the foundation for a simple web API 
+application was established using the following software:
 
-\section{Data Acquistion}
-Describe how the SRER data were scraped, parsed, cleaned and stored.
+\begin{enumerate}
+  \item Docker - a container platform \cite{hid505Docker2018}
+  \item Python - the programming language
+  \item Graphene - a Python programming language library that is used to 
+  develop GraphQL APIs
+  \item PostgresQL - the database server
+  \item Django - a Python based model-view-controller (MVC) web development 
+  framework
+  \item Django Rest Framework - a Django plugin that facilitates the 
+  development of REST APIs
+  \item Graphene Django - a Django plugin that facilitates development of 
+  GraphQL APIs
+\end{enumerate}
 
-Describe how the WGEW data were scraped, parsed, cleaned and stored.
+The project source code is currently hosted at: https://github.com/acatejr/eapi.git
 
-\section{Web API Application}
-Describe the tools used and how the web api application was developed.
-I have done most of this work already.
+\subsection{REST/Swagger API}
+Generally, a REST based API endpoints, in combination with a tool like Swagger 
+are combined to create a web interface like the one shown in 
+figure~\ref{f:rest_swagger_ui}.  The figure provides an example of the various 
+API endpoints (e.g., /api/srer/v1.0/precipevents).  Some endpoints require 
+input parameters which are used to execute parameterized queries (e.g. queries 
+that filter data) data, while other endpoints require no parameters and 
+typically return a list of data entities.
 
-The source code is currently hosted at: https://github.com/acatejr/eapi.git
+\begin{figure}[htb]
+  \centering\includegraphics[width=\columnwidth]{./images/rest_swagger_ui.png}
+  \caption{REST/SWAGGER UI \cite{hid505SrerWebSite2018}}\label{f:rest_swagger_ui}
+\end{figure}
+
+\subsection{GraphQL API}
+Content on GraphQL here.
 
 \section{Service Comparison}
 GraphQL and REST Swagger Comparison
