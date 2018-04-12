@@ -186,8 +186,6 @@ application was established using the following software:
   GraphQL APIs
 \end{enumerate}
 
-The project source code is currently hosted at: https://github.com/acatejr/eapi.git
-
 \subsection{REST/Swagger API}
 Generally, a REST based API endpoints, in combination with a tool like Swagger 
 are combined to create a web interface like the one shown in 
@@ -199,8 +197,30 @@ typically return a list of data entities.
 
 \begin{figure}[htb]
   \centering\includegraphics[width=\columnwidth]{./images/rest_swagger_ui.png}
-  \caption{REST/SWAGGER UI \cite{hid505SrerWebSite2018}}\label{f:rest_swagger_ui}
+  \caption{REST/SWAGGER UI}\label{f:rest_swagger_ui}
 \end{figure}
+
+In figure~\ref{f:srer_rest_raingage_list} we see an example of a REST 
+request's response and the resulting JSON data packet.  The JSON request is 
+relatively clear.  Based on the request url in figure~\ref{f:srer_rest_raingage_list} 
+we know the domain name (localhost), API context (srer), API version number 
+(v1.0) and the data being requested (raingages).  However, in a REST API 
+unless well documented by the developers, developing properly formated 
+parameterized request urls can be challenging.  However, the difficulties are 
+counter-balanced by the implementing a Swagger UI for the API and making sure 
+proper documentation is added, so the end-user has as much information as 
+possible.
+
+The JSON response is a bit more intuitive.  From firgure figure~\ref{f:srer_rest_raingage_list} 
+we can see the basic data structure and data types.  There are many 
+programming libraries that automate the parsing of JSON data into domain 
+objects that facilitate API client development.
+
+\begin{figure}[htb]
+  \centering\includegraphics[width=\columnwidth]{./images/srer_rest_raingage_list.png}
+  \caption{REST/SWAGGER Response}\label{f:srer_rest_raingage_list}
+\end{figure}
+
 
 \subsection{GraphQL API}
 Content on GraphQL here.
