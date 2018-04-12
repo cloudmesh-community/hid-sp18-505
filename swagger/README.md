@@ -16,8 +16,8 @@ To see the application's client open http://127.0.0.1:5000/index
 ## Example curl calls
 curl -i http://127.0.0.1:5000/  
 curl -i http://127.0.0.1:5000/status  
-curl -i http://127.0.0.1:5000/raingages
-curl -i http://127.0.0.1:5000/precipevents
+curl -i http://127.0.0.1:5000/raingages  
+curl -i http://127.0.0.1:5000/precipevents  
 
 ## Resources and References
 https://github.com/frol/flask-restplus-server-example
