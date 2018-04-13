@@ -6,10 +6,28 @@ If docker is installed the entire application should run by running:
 `
 docker-compose up -d --build
 `  
+Because of how Docker works with local file permissions, you might have to run 
+the command:
+
+`
+sudo chown -R $USER:$USER .  
+`  
+
 Assuming you are in the root of the project.  
 
-To see the Swgger UI visit http://127.0.0.1:5000/apidocs
-To see the swagger.json specification visit http://127.0.0.1/api-docs
+The application can also be run by executing:
+
+`
+make all
+`  
+
+However, you still might need to run:  
+`
+sudo chown -R $USER:$USER .  
+`  
+
+To see the Swgger UI visit http://127.0.0.1:5000/apidocs  
+To see the swagger.json specification visit http://127.0.0.1:5000/api-docs  
 The swagger.json spec is generatate automatically by using the [Eve-Swagger plugin](https://github.com/pyeve/eve-swagger).  
 To see the application's client open http://127.0.0.1:5000/index  
 

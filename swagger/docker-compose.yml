@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.mongo
-    image: mongodb
+    image: swagger/mongodb
     env_file: .env
     volumes:
       - .docker/mongo/data/db:/data/db
@@ -18,11 +18,12 @@ services:
     env_file: .env
     depends_on:
       - mongodb
-    image: app
+    image: swagger/app
     volumes:
       - .:/opt/app
     # command: bash -c "python loader.py && python server/app.py"
-    command: python server/app.py
+    # command: python server/app.py
+    command: ./bootstrap.sh
     stdin_open: true
     tty: true
     links:
