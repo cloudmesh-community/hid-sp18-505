@@ -73,7 +73,8 @@ Spring 2018
 
 # Week 14 Notes
 * 2018/04/10 Project paper.  
-* 2018/04/10 Project paper and code tweaks.  
+* 2018/04/11 Project paper and code tweaks.  
+* 2018/04/12 Swagger project update
 
 ### Scratch Notes and Reminders
  - Left off on p. 80 in handbook.  
