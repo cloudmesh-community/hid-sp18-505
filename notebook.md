@@ -75,6 +75,4 @@ Spring 2018
 * 2018/04/10 Project paper.  
 * 2018/04/11 Project paper and code tweaks.  
 * 2018/04/12 Swagger project update
-
-### Scratch Notes and Reminders
- - Left off on p. 80 in handbook.  
+* 2018/04/14 Cluster project and main class project.  
