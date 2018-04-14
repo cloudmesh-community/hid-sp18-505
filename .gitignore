@@ -9,6 +9,7 @@ dest/
 
 .DS_Store
 node_modules/
+cluster/app/venv/
 /dist/
 dist/
 npm-debug.log*
