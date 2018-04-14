@@ -158,4 +158,5 @@ internal network IP address.
 
 That is a working demo of a python web application running on a 3-node docker swarm cluster.  
 
+Mind blown!  
 ![Mind blown!](./mind.gif)  
