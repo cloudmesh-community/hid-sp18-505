@@ -1,6 +1,7 @@
 *.pyc
 *.bak
 .env
+*.log
 scratch*
 
 ./swagger/.docker/mongodb/data
@@ -10,6 +11,7 @@ dest/
 .DS_Store
 node_modules/
 cluster/app/venv/
+cluster/.vagrant/
 /dist/
 dist/
 npm-debug.log*

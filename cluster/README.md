@@ -29,7 +29,7 @@ internal network IP address.
 2. Build the application's docker image.  
 
     ```
-    docker build hid505/clusterapp .
+    docker build -t hid505/clusterapp .
     ```  
     hid505/clusterapp is the Docker image name.  
 
@@ -55,12 +55,15 @@ internal network IP address.
     docker swarm join --token SWMTKN-1-098amtqewqublahrd6bh5y3tvmlk4dozcb1lkylh2lwttb4fr3-btgkbmen3baqsfguv62c5veie 192.168.100.10:2377
     exit
     ```  
+
 6. Examine the swarm nodes to make sure the swarm is running.  
 
     ```
     vagrant ssh manager
     docker node ls
     ```  
+
+    <SCREEN CAP IMAGE HERE>
 
 7. Create network for the swarm.  
 
@@ -75,6 +78,9 @@ internal network IP address.
     ```
     docker network ls  
     ```  
+
+    <SCREEN CAP IMAGE HERE>
+
 8. Create the web application's service.  
 
     Get the image name.  
@@ -88,6 +94,8 @@ internal network IP address.
     ```  
 
     You can now open a browser and access http://192.168.100.10:8000  
+
+    <SCREEN CAP IMAGE HERE>  
 
 9. Let's interact with the cluster.  
 
@@ -103,6 +111,7 @@ internal network IP address.
     ```
     docker service ps dsv
     ```  
+    <SCREEN CAP IMAGE HERE>  
 
     Scale the cluster down from 7 to 4.  
 
@@ -114,12 +123,16 @@ internal network IP address.
     ```
     docker service ps dsv
     ```  
+    <SCREEN CAP IMAGE HERE>  
 
     Take a node off-line.  
 
     ```
     docker node ls # To get a list of nodes
+    ```  
+    <SCREEN CAP IMAGE HERE>  
 
+    ```
     docker node update --availability drain xk4kbta0mvg5if4jkr9ftji02
     ```  
 
@@ -128,6 +141,7 @@ internal network IP address.
     ```
     docker node ls
     ```  
+    <SCREEN CAP IMAGE HERE>  
 
     Bring a drained node backup.  
 
@@ -135,4 +149,13 @@ internal network IP address.
     docker node update --availability active xk4kbta0mvg5if4jkr9ftji02
     ```  
 
+    Take a look.  
+
+    ```
+    docker node ls
+    ```  
+    <SCREEN CAP IMAGE HERE>  
+
 That is a working demo of a python web application running on a 3-node docker swarm cluster.  
+
+![Mind blown!](https://gph.is/2AmePHo)  

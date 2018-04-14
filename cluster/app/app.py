@@ -22,7 +22,7 @@ def get_container():
         out = str(out)
         container = out.split("\n")[0].split('/')[-1]
 
-    return container
+    return container[:-3]
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=8000, debug=True)
