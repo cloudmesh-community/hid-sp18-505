@@ -75,8 +75,8 @@ following:
 \end{verbatim}
 
 In this example we see a query request to a GraphQL API that is asking for all 
-stock data with respective symbol, price, an date.  Alternatively, a REST based 
-query might look like the following:
+stock data with respective symbol, price, an date.  Alternatively, a REST 
+based query might look like the following:
 
 \begin{verbatim}
 http://server.host.com/api/v1/allstocks
@@ -134,28 +134,28 @@ services.
 \section{Data Collection}
 
 Data were collected from the Santa Rita Experimental Range website.  In figure 
-Figure~\ref{f:srer_landing_page}, we see the present day landing page for SRER.  
-What is not apparent in the landing page is the plethora of data available 
-data available in the site.
+Figure~\ref{f:srer_landing_page}, we see the present day landing page for 
+SRER.  What is not apparent in the landing page is the plethora of data 
+available data available in the site.
 
 \begin{figure}[htb]
   \centering\includegraphics[width=\columnwidth]{./images/srer_landing_page.png}
-  \caption{SRER Landing Page \cite{hid505SrerWebSite2018}}\label{f:srer_landing_page}
+  \caption{SRER Landing Page\cite{hid505SrerWebSite2018}}\label{f:srer_landing_page}
 \end{figure}
 
 
-In figure~\ref{f:srer_precip_data_page} we have navigated one page deeper into the 
-SRER site and as can be seen, meta-data and data are both availabe, but as raw 
-text files.  These data are consumable as is, but could be enhanced by being 
-made machine readible by creating web services to deliver the data.
+In figure~\ref{f:srer_precip_data_page} we have navigated one page deeper into 
+the SRER site and as can be seen, meta-data and data are both availabe, but as 
+raw text files.  These data are consumable as is, but could be enhanced by 
+being made machine readible by creating web services to deliver the data.
 
 \begin{figure}[htb]
   \centering\includegraphics[width=\columnwidth]{./images/srer_precip_data_page.png}
-  \caption{SRER Precipitation Data Page \cite{hid505SrerWebSite2018}}\label{f:srer_precip_data_page}
+  \caption{SRER Precipitation Data Page\cite{hid505SrerWebSite2018}}\label{f:srer_precip_data_page}
 \end{figure}
 
 \section{Data Loading}
-The data sets downloaded for this demonstration were the raingage (Universal 
+The data sets downloaded for this demonstration were the raingage Universal 
 Transverse Mercator (UTM) coordinate data files and the Excel file that 
 contained all of the preciption data for the respective raingages.  Some of 
 the raingage data had to be cleaned mostly due to typographical errors and the 
@@ -169,11 +169,11 @@ data for raingages, where as the pipe symbol is typically not used in written
 English.
 
 \section{Web API Development}
-After the data were prepared for import into a database, the foundation for a simple web API 
-application was established using the following software:
+After the data were prepared for import into a database, the foundation for a 
+simple web API application was established using the following software:
 
 \begin{enumerate}
-  \item Docker - a container platform \cite{hid505Docker2018}
+  \item Docker - a container platform\cite{hid505Docker2018}
   \item Python - the programming language
   \item Graphene - a Python programming language library that is used to 
   develop GraphQL APIs
@@ -191,39 +191,52 @@ Generally, a REST based API endpoints, in combination with a tool like Swagger
 are combined to create a web interface like the one shown in 
 figure~\ref{f:rest_swagger_ui}.  The figure provides an example of the various 
 API endpoints (e.g., /api/srer/v1.0/precipevents).  Some endpoints require 
-input parameters which are used to execute parameterized queries (e.g. queries 
-that filter data) data, while other endpoints require no parameters and 
-typically return a list of data entities.
+input parameters which are used to execute parameterized queries (e.g., 
+queries that filter data) data, while other endpoints require no parameters 
+and typically return a list of data entities.
 
 \begin{figure}[htb]
   \centering\includegraphics[width=\columnwidth]{./images/rest_swagger_ui.png}
-  \caption{REST/SWAGGER UI}\label{f:rest_swagger_ui}
+  \caption{REST/Swagger UI}\label{f:rest_swagger_ui}
 \end{figure}
 
 In figure~\ref{f:srer_rest_raingage_list} we see an example of a REST 
 request's response and the resulting JSON data packet.  The JSON request is 
-relatively clear.  Based on the request url in figure~\ref{f:srer_rest_raingage_list} 
-we know the domain name (localhost), API context (srer), API version number 
-(v1.0) and the data being requested (raingages).  However, in a REST API 
-unless well documented by the developers, developing properly formated 
-parameterized request urls can be challenging.  However, the difficulties are 
-counter-balanced by the implementing a Swagger UI for the API and making sure 
-proper documentation is added, so the end-user has as much information as 
-possible.
+relatively clear.  Based on the request url in 
+figure~\ref{f:srer_rest_raingage_list} we know the domain name (localhost), 
+API context (srer), API version number (v1.0) and the data being requested 
+(raingages).  However, in a REST API unless well documented by the developers, 
+developing properly formated parameterized request urls can be challenging.  
+However, the difficulties are counter-balanced by the implementing a Swagger 
+UI for the API and making sure proper documentation is added, so the end-user 
+has as much information as possible.
 
-The JSON response is a bit more intuitive.  From firgure figure~\ref{f:srer_rest_raingage_list} 
-we can see the basic data structure and data types.  There are many 
-programming libraries that automate the parsing of JSON data into domain 
-objects that facilitate API client development.
+The JSON response is a bit more intuitive.  From firgure 
+figure~\ref{f:srer_rest_raingage_list} we can see the basic data structure and 
+data types.  There are many programming libraries that automate the parsing of 
+JSON data into domain objects that facilitate API client development.
 
 \begin{figure}[htb]
-  \centering\includegraphics[width=\columnwidth]{./images/srer_rest_raingage_list.png}
+  \centering\includegraphics[width=\columnwidth]
+  {./images/srer_rest_raingage_list.png}
   \caption{REST/SWAGGER Response}\label{f:srer_rest_raingage_list}
 \end{figure}
 
-
 \subsection{GraphQL API}
-Content on GraphQL here.
+Similar to the REST/Swagger user interface, many GraphQL APIs allow the 
+developer to enable a user interface that serves as the GraphQL API's 
+documentation.  Figure~\ref{f:graphql_ui} shows an example of the GraphQL API 
+interface.  At first glance, the GraphQL interface appears to not have nearly 
+the amount of documentation that the Swagger equivalent has.  However, the 
+input portion (left half) of the interface has autocomplete features and the 
+user simple has to hit the space bar or start typeing in order to get guidance 
+from the interface.
+
+\begin{figure}[htb]
+  \centering\includegraphics[width=\columnwidth]
+  {./images/graphql_ui.png}
+  \caption{REST/SWAGGER Response}\label{f:graphql_ui}
+\end{figure}
 
 \section{Service Comparison}
 GraphQL and REST Swagger Comparison
@@ -244,6 +257,19 @@ The conclusion will go here.
 \begin{acks}
 The authors would like to thank Dr.~Gregor~von~Laszewski for his support 
 and suggestions to write this paper.
+
+The authors would also like to thank the following:
+
+Dr. Mitch McLaran of the University of Arizona's School of Natural Resources 
+and The Environment for providing access and support of the SRER website.  
+
+Craig Wissler of the University of Arizona's School of Natural Resources 
+and The Environment for providing feedback on related to the SRER data.
+
+Dr. David Goodrich and Dr. Phil Heilman both from the United States Deparment 
+of Agriculture's Southwest Watershed Research Center's for providing support 
+and access to the Walnut Gulch Experimental Watershed website and data.
+
 \end{acks}
 
 \bibliographystyle{ACM-Reference-Format}
