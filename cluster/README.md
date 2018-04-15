@@ -74,7 +74,7 @@ internal network IP address.
     docker node ls
     ```  
 
-    ![swarm1](./swarm1.png)
+    ![swarm1](./images/swarm1.png)
 
 7. Create network for the swarm.  
 
@@ -90,7 +90,7 @@ internal network IP address.
     docker network ls  
     ```  
 
-    ![confirm_net](./confirm_net_1.png)
+    ![confirm_net](./images/confirm_net_1.png)
 
 8. Create the web application's service.  
 
@@ -98,7 +98,7 @@ internal network IP address.
     ```
     docker images
     ```  
-    ![image_list](./image_list.png)
+    ![image_list](./images/image_list.png)
 
     Start the web application service.  
 
@@ -110,7 +110,7 @@ internal network IP address.
 
     You can now open a browser and access http://192.168.100.10:8000  
 
-    ![browser](./browser.png)
+    ![browser](./images/browser.png)
 
     If you repeat browser requests to the service you should see a different container id as the JSON response.  
     
@@ -128,7 +128,7 @@ internal network IP address.
     ```
     docker service ps dsv
     ```  
-    ![cluster_scaled_up](./cluster_scaled_up.png)  
+    ![cluster_scaled_up](./images/cluster_scaled_up.png)  
 
     Scale the cluster down from 7 to 4.  
 
@@ -140,14 +140,14 @@ internal network IP address.
     ```
     docker service ps dsv
     ```  
-    ![cluster_scaled_down](./cluster_scaled_down.png)  
+    ![cluster_scaled_down](./images/cluster_scaled_down.png)  
     
     Take a node off-line.  
 
     ```
     docker node ls # To get a list of nodes
     ```  
-    ![node_list](./node_list.png)
+    ![node_list](./images/node_list.png)
 
     ```
     docker node update --availability drain 3m1rm0t45eguz611skknilt3m
@@ -158,7 +158,7 @@ internal network IP address.
     ```
     docker node ls
     ```  
-    ![node_list_drained](./node_list_drained.png)
+    ![node_list_drained](./images/node_list_drained.png)
 
     Bring a drained node backup.  
 
@@ -171,9 +171,9 @@ internal network IP address.
     ```
     docker node ls
     ```  
-    ![node_list_active](./node_list_active.png)
+    ![node_list_active](./images/node_list_active.png)
 
 That is a working demo of a python web application running on a 3-node docker swarm cluster.  
 
 Mind blown!  
-![Mind blown!](./mind.gif)  
+![Mind blown!](./images/mind.gif)  
