@@ -235,8 +235,32 @@ from the interface.
 \begin{figure}[htb]
   \centering\includegraphics[width=\columnwidth]
   {./images/graphql_ui.png}
-  \caption{REST/SWAGGER Response}\label{f:graphql_ui}
+  \caption{GraphQL User Interface}\label{f:graphql_ui}
 \end{figure}
+
+Figure~\ref{f:graphql_rgs} demonstrates an example of a query in the GraphQL UI 
+that is used to request a list of objects, in this case, all raingages.  The 
+left half of the user interface is where the query is created.  The interface 
+behaves similarly to many itegrated development environments (IDE) by being 
+aware of the underlying data model and query request parameters.  Consequently, 
+as the user is developing the query, the UI provides autocomplete features that 
+help expedite query development.
+
+\begin{figure}[htb]
+  \centering\includegraphics[width=\columnwidth]
+  {./images/graphql_rgs.png}
+  \caption{GraphQL UI Query Example}\label{f:graphql_rgs}
+\end{figure}
+
+The query results are JSON data packet that is a list of raingage objects 
+including attributes for each raingage.  As with many other API's, this data 
+packet can be consumed by a wide variety of clients including other web 
+applications or thicker desktop clients like the statistical package R.
+
+REST based API's are typically developed with create, retrieve, update and 
+delete (CRUD) actions.  GraphQL APIs offer the same type of actions, but not in 
+the same format.  Due to time constraints demonstration of those actions is 
+outside of the scope of this paper.
 
 \section{Service Comparison}
 GraphQL and REST Swagger Comparison
@@ -256,20 +280,15 @@ The conclusion will go here.
 
 \begin{acks}
 The authors would like to thank Dr.~Gregor~von~Laszewski for his support 
-and suggestions to write this paper.
-
-The authors would also like to thank the following:
-
-Dr. Mitch McLaran of the University of Arizona's School of Natural Resources 
-and The Environment for providing access and support of the SRER website.  
-
-Craig Wissler of the University of Arizona's School of Natural Resources 
-and The Environment for providing feedback on related to the SRER data.
-
-Dr. David Goodrich and Dr. Phil Heilman both from the United States Deparment 
-of Agriculture's Southwest Watershed Research Center's for providing support 
-and access to the Walnut Gulch Experimental Watershed website and data.
-
+and suggestions to write this paper.  The authors would also like to thank 
+the following people.  Dr.~Mitch~McLaran of the University of Arizona's School 
+of Natural Resources and The Environment for providing access and support of 
+the SRER website.  Craig Wissler of the University of Arizona's School of 
+Natural Resources and The Environment for providing feedback on related to the 
+SRER data.  Dr.~David~Goodrich and Dr.~Phil~Heilman, both from the United 
+States Deparment of Agriculture's Southwest Watershed Research Center, for 
+providing support and access to the Walnut Gulch Experimental Watershed website 
+and data.
 \end{acks}
 
 \bibliographystyle{ACM-Reference-Format}
