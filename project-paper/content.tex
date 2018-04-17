@@ -286,10 +286,33 @@ GraphQL may have better performance rates.
   \caption{GraphQL/REST Comparision}\label{f:comparison-graph}
 \end{figure}
 
+In hopes of providing more effidence related to GraphQL performane in 
+comparison to REST performance.  A simple load test was created to test 
+the REST API developed for this project against the GraphQL API created also 
+created for this project.
+
+The test environment consisted of:
+\begin{enumerate}
+\item HP Spectre X360 Laptop with 16 GB of RAM
+\item Intel i7 Processor
+\item Ubuntu 16.04 Operating System
+\item PostgreSql 9.5 Database Server
+\item Python 3.6.4
+\item Django 2.0.3
+\item Locust Python load testing API and command line tool
+\item Graphene and Dango-Grapql plugins were used to create the GraphQL API
+\item Django Rest Framework was used to create the REST API
+\end{enumerate}
+The source code repository for this project provides more detail on APIs and 
+Python libraries used to develop the interface.
+
+The load test was simple in each case, simulate 100 users, spawning 5 users 
+per second, for 10 minutes.
+
 Figures ... demonstrate simple load tests run against the REST and GraphQL APIs 
-developed for this project.  The load tests were simple identically.  Basicall, 
-both the raingage list API endpoint for both services were tests using the same 
-input paramters.
+developed for this project.  The load tests were simple and as identical as 
+possible.  Basically, both the raingage list API endpoint for both services 
+were tests using the same input paramters.
 
 Figure and figure.....
 

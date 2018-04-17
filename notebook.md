@@ -76,3 +76,7 @@ Spring 2018
 * 2018/04/11 Project paper and code tweaks.  
 * 2018/04/12 Swagger project update
 * 2018/04/14 Cluster project and main class project.  
+
+# Week 15 Notes
+* 2018/04/15 Project paper and simple project stress tests.  
+ 
