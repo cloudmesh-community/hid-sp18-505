@@ -307,14 +307,49 @@ The source code repository for this project provides more detail on APIs and
 Python libraries used to develop the interface.
 
 The load test was simple in each case, simulate 100 users, spawning 5 users 
-per second, for 10 minutes.
+per second, for 10 minutes.  The Python load testing tool, Locust, was used 
+to run each test under the described parameters and the web interface in 
+Locust provided summy graphics showing the results of the test.
 
-Figures ... demonstrate simple load tests run against the REST and GraphQL APIs 
-developed for this project.  The load tests were simple and as identical as 
-possible.  Basically, both the raingage list API endpoint for both services 
-were tests using the same input paramters.
+Figure~\ref{f:f:graphql_requests} and figure~\ref{f:graphql_response} 
+demonstrate simple load tests run against the GraphQL API developed for this 
+project.
 
-Figure and figure.....
+\begin{figure}[htb]
+  \centering\includegraphics[width=\columnwidth]
+  {./images/graphql_requests.png}
+  \caption{GraphQL Total Requests per Second}\label{f:graphql_requests}
+\end{figure}
+
+\begin{figure}[htb]
+  \centering\includegraphics[width=\columnwidth]
+  {./images/graphql_response.png}
+  \caption{GraphQL Average Response Time}\label{f:graphql_response}
+\end{figure}
+
+Figure~\ref{f:rest_requests} and figure~\ref{f:rest_response} show the results 
+of the same test run against the REST API for the web application.
+
+\begin{figure}[htb]
+  \centering\includegraphics[width=\columnwidth]
+  {./images/rest_requests.png}
+  \caption{REST Total Requests per Second}\label{f:rest_requests}
+\end{figure}
+
+\begin{figure}[htb]
+  \centering\includegraphics[width=\columnwidth]
+  {./images/rest_response.png}
+  \caption{REST Average Response Time}\label{f:rest_response}
+\end{figure}
+
+Contrary to expectations the test demonstrates that the response times for the 
+REST web service are lower than for the equivalent GraphQL service.  However, 
+given that the particular test is simplistic and there could be many other 
+factors affecting the test, there is no evidence in this study to make qualitative 
+statements about the performance of eith GraphQL or REST.  A more robust 
+examination of the demo application and a rigorous load-testing design would 
+be required in order to develop accurate insights into performance differences 
+between the two technologies.
 
 \section{Amazon Lambda}
 If there is time describe and implement the Amazon Lambda that the web 

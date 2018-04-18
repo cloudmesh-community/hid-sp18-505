@@ -46,6 +46,7 @@ paper/report.log
 paper/report.lot
 paper/report.out
 paper/report.ttt
+project-paper/check.tex
 
 paper/*.aux
 paper/*.bbl
