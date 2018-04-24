@@ -80,4 +80,9 @@ Spring 2018
 # Week 15 Notes
 * 2018/04/15 Project paper and simple project stress tests.  
 * 2018/04/16 Project paper.  
+* 2018/04/20 Project programming.  
+* 2018/04/21 Project programming.  
+
+# Week 16 Notes
+* 2018/04/23 Project paper.  
  
