@@ -74,9 +74,9 @@ following:
 }
 \end{verbatim}
 
-In this example we see a query request to a GraphQL API that is asking for all 
-stock data with respective symbol, price, an date.  Alternatively, a REST 
-based query might look like the following:
+In this example we see a query request to a GraphQL API that is asking for 
+all stock data with respective symbol, price, an date.  Alternatively, a 
+REST based query might look like the following:
 
 \begin{verbatim}
 http://server.host.com/api/v1/allstocks
@@ -345,19 +345,63 @@ of the same test run against the REST API for the web application.
 Contrary to expectations the test demonstrates that the response times for the 
 REST web service are lower than for the equivalent GraphQL service.  However, 
 given that the particular test is simplistic and there could be many other 
-factors affecting the test, there is no evidence in this study to make qualitative 
-statements about the performance of eith GraphQL or REST.  A more robust 
-examination of the demo application and a rigorous load-testing design would 
-be required in order to develop accurate insights into performance differences 
-between the two technologies.
+factors affecting the test, there is no evidence in this study to make 
+qualitative statements about the performance of eith GraphQL or REST.  A more 
+robust examination of the demo application and a rigorous load-testing design 
+would be required in order to develop accurate insights into performance 
+differences between the two technologies.
 
-\section{Amazon Lambda}
-If there is time describe and implement the Amazon Lambda that the web 
-API/application can use.
+\section{Cloud Infrastructure}
+In order to provide further proof-of-concept that the application and its 
+respective data services and data are viable as web services in a 
+near-production setting, a production like environemtn for the application 
+was created using Amazon's Elastic Beanstalk (EB) cloud infrastructure.  This 
+paper does not serve as a tutorial on how to create an Amazon AWS account nor 
+will we offer a complete tutorial on how to create an EB application.  
+However, the following outlines and describes the experience and findings in 
+the process of converting this application to a EB cloud-hosted application.
 
-\section{Raspberry Pi Cluster}
-If there is time, describe and develop a three-node Raspberry Pi cluster and 
-deploy the web api application to that cluser.
+\subsection{AWS Elastic Beanstalk}
+``AWS Elastic Beanstaok is an easy-to-use service used to deploy and scale web 
+applications developed in programming languages like Java, Python, PHP, and 
+others.''\cite{AWSEB2018}
+
+The proceedure for creating and deploying an AWS EB application is relatively 
+straight forward.  A developer can either initialize an application using the 
+EB web console or, if the user installs the EB command-line-interface (CLI) 
+the application can be initialized locally.  The developer can chose from 
+several programming languages and specifies the programming language during 
+project initialization.  The initialization process requires the developer to 
+create deployment configuration data so that AWS EB knows what programming 
+language and what type of application is to be deployed and served over the 
+internet.  The application can exist locally before deployment and once properly 
+configured the application can be deployed and almost run on first deployment.  
+
+However, most web applications relay on a backend database server like 
+PostgreSql or MySQL.  Amazon offers database servers throught its 
+Relational Database Service (RDS) \cite{RDS2018}.  The application's 
+database is created after the application is initialized and after EB knows 
+about the application.  The database is added as a RDS component to the EB 
+application via online configuration.  Once RDS is configured for the 
+application, the appliation code has to be modified so that the codes has 
+database connection information that applies to the production environment 
+(EB) or local development environment.
+
+A third feature that EB offers that facilitates development and deployment of 
+web applications to a cloud based infrstructure is how EB handles static 
+files.  Web applications typically have many static files like images, 
+cascading style sheets, javascript files and more.  Those files tend to not 
+change as frequently as application code does and ideally should be served 
+seperately by a separate serve for security and efficiency reasons.  However, 
+dealing with that type of deployment can require quite a bit of time and 
+increases complexity.  EB has an elegant solution for this.  A web application, 
+once configured and initialized is automatically provide and Amazon 
+S3 Bucket \cite{S3Bucket2018}.  Amazon EB, automatically creates a storage 
+location for the application's static files, copies those files when need 
+to the storage location and serves those files for the web application.  
+Typically, in a non-EB environment that is work the programmer has to develop 
+and maintain.
+
 
 \section{Conclusion}
 The conclusion will go here.
