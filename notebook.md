@@ -85,3 +85,5 @@ Spring 2018
 
 # Week 16 Notes
 * 2018/04/23 Project paper.  
+* 2018/04/25 Project paper.  
+

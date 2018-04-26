@@ -404,7 +404,7 @@ and maintain.
 
 \section{Conclusion and Findings}
 
-\subscection{REST and GraphQL}
+\subsection{REST and GraphQL}
 The load tests cited earlier in the paper that the application's REST services 
 tended to handle requests better than the GraphQL services.  However, the 
 Vazquez-Ingelmo, Cruz-Benito, Garcia-Palvo \cite{hid505Vzquez2017} research 
@@ -429,7 +429,7 @@ Amazon's Elastic Beanstalk.
 
 Amazon's Elastic Beanstalk has a higher learning-curve than Heroku, but once 
 the project is configured properly and deployed, work flow for making and 
-committing application changes becomes streamlined.  Also, Django application's 
+committing application changes becomes streamlined.  Also, Django applications 
 are known for being easy to start in development, but difficult to deploy for 
 testing and production.  In particular a significant amount of work has to be 
 done in order to make static files available.  Elastic Beanstalk automatically 
@@ -440,10 +440,10 @@ Elastic Beanstalk takes care of the rest with regrads to static files.
 Another finding worth noting, while creating a cloud-based application 
 like this one, was how to handle getting initial data sets into the 
 application.  This application relied upon data from the Walnut Gulch 
-Experimental Watershed and the Santa Rita Experimental Range. SRER's 
+Experimental Watershed and the Santa Rita Experimental Range. SRER 
 precipitation data set was the largest and consisted of approximately 30,000 
 records, which is not a large data set.  However, importing even 30,000 records 
-proved to be resource intensive during the initial import.  WGEW's 
+proved to be resource intensive during the initial import.  WGEW 
 precipitation data set consisted of over 300,000 data points.  This was a 
 significant number to handle and proved problmetic during the deployment of 
 after created API features related to WGEW.  Initially, data import was handled 
@@ -466,6 +466,13 @@ a secured, direct connection was created between the devlopment workstation
 and the production database where batch SQL-imports were used to complete the 
 transfer of the initial data sets.  This method ultimately proved to be a 
 faster method than the application deployment method.
+
+Finally, as of the completion of this paper the total costs incurred on 
+Amazon's Elastic Beanstalk, which includes the deployed web application 
+and Amazon S3 Bucket for storing static files and a PostgresQL database server 
+with initial data import, and a few web requests to confirm the application is 
+running amount to just under five dollars.  The web application can be 
+reviewed by opening a web browser to www.earthapi.net.
 
 \begin{acks}
 The authors would like to thank Dr.~Gregor~von~Laszewski for his support 
