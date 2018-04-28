@@ -88,3 +88,5 @@ Spring 2018
 * 2018/04/25 Project paper.  
 * 2018/04/26 Dockerized the project-code source so the application can be run locally.  There is now both a paper for the project ant a application too.  The app is running in a PAAS environment at www.earthapi.net.
 * 2018/04/27 Making video to show project, will upload ASAP.  Likely tomorrow.  
+* 2018/04/27 Had to remove the video file because it was too large.  Uploaded video to another website and am sharing link.
+* 2018/04/27 Video at http://www.acatejr.com/cc/
