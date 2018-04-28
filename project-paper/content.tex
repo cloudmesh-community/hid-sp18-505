@@ -74,9 +74,9 @@ following:
 }
 \end{verbatim}
 
-In this example we see a query request to a GraphQL API that is asking for 
-all stock data with respective symbol, price, an date.  Alternatively, a 
-REST based query might look like the following:
+In this example we see a query request to a GraphQL API that is asking 
+for all stock data with respective symbol, price, an date.  
+Alternatively, a REST based query might look like the following:
 
 \begin{verbatim}
 http://server.host.com/api/v1/allstocks
@@ -133,25 +133,25 @@ services.
 
 \section{Data Collection}
 
-Data were collected from the Santa Rita Experimental Range website.  In figure 
-Figure~\ref{f:srer_landing_page}, we see the present day landing page for 
-SRER.  What is not apparent in the landing page is the plethora of data 
-available data available in the site.
+Data were collected from the Santa Rita Experimental Range website.  In 
+figure Figure~\ref{f:srer_landing_page}, we see the present day landing 
+page for SRER.  What is not apparent in the landing page is the 
+plethora of data available data available in the site.
 
 \begin{figure}[htb]
-  \centering\includegraphics[width=\columnwidth]{./images/srer_landing_page.png}
-  \caption{SRER Landing Page\cite{hid505SrerWebSite2018}}\label{f:srer_landing_page}
+  \centering\includegraphics[width=\columnwidth]{./images/srerlandingpage.png}
+  \caption{SRER Page\cite{hid505SrerWebSite2018}}\label{f:srer_landing_page}
 \end{figure}
 
 
-In figure~\ref{f:srer_precip_data_page} we have navigated one page deeper into 
+In figure~\ref{f:srerprecipdata} we have navigated one page deeper into 
 the SRER site and as can be seen, meta-data and data are both availabe, but as 
 raw text files.  These data are consumable as is, but could be enhanced by 
 being made machine readible by creating web services to deliver the data.
 
 \begin{figure}[htb]
-  \centering\includegraphics[width=\columnwidth]{./images/srer_precip_data_page.png}
-  \caption{SRER Precipitation Data Page\cite{hid505SrerWebSite2018}}\label{f:srer_precip_data_page}
+  \centering\includegraphics[width=\columnwidth]{./images/srerprecipdata.png}
+  \caption{SRER Precip.\cite{hid505SrerWebSite2018}}\label{f:srerprecipdata}
 \end{figure}
 
 \section{Data Loading}
@@ -423,9 +423,9 @@ environment that, as long as the project structure complies with one of the
 Heroku prescribed project structures, makes deployment a very simple process.  
 Also, Heroku has excellent recovery process in place so that if an applcition 
 is deployed and there is a failure in the deployment process, Heroku stops the 
-deploy and allows the existing deployment to continue running.  However, Heroku 
-has a notably higher fee structure, which was the primary reason for choosing 
-Amazon's Elastic Beanstalk.  
+deploy and allows the existing deployment to continue running.  However, 
+Heroku has a notably higher fee structure, which was the primary reason for 
+choosing Amazon's Elastic Beanstalk.  
 
 Amazon's Elastic Beanstalk has a higher learning-curve than Heroku, but once 
 the project is configured properly and deployed, work flow for making and 
@@ -442,23 +442,24 @@ like this one, was how to handle getting initial data sets into the
 application.  This application relied upon data from the Walnut Gulch 
 Experimental Watershed and the Santa Rita Experimental Range. SRER 
 precipitation data set was the largest and consisted of approximately 30,000 
-records, which is not a large data set.  However, importing even 30,000 records 
-proved to be resource intensive during the initial import.  WGEW 
+records, which is not a large data set.  However, importing even 30,000 
+records proved to be resource intensive during the initial import.  WGEW 
 precipitation data set consisted of over 300,000 data points.  This was a 
 significant number to handle and proved problmetic during the deployment of 
-after created API features related to WGEW.  Initially, data import was handled 
-during each deployment of the application.  The databases tables were 
+after created API features related to WGEW.  Initially, data import was 
+handled during each deployment of the application.  The databases tables were 
 initialized and populated during each deployment.  This was considered 
 acceptable until all of the initial data was loaded and worked while the SRER 
-data were the only data in the database.  However, once the WGES data (300,000) 
-records were incorporated into the deployment process, the deployment did not 
-execute properly and left the application in a non-recoverable state in 
-Amazon's Elastic Beanstalk.  Fortunately, recovering from such a state and in 
-the context of this project was a straight-forward process requiring re-setting 
-some Elastic Beanstalk settings, removing the application from Elastic 
-Beanstalk and re-deploying to a newly created application environment on 
-Elastic Beanstalk.  However, this meant figuring how to deploy the initial 
-data sets since they still needed to be incorporated into the live application.  
+data were the only data in the database.  However, once the WGES data 
+(300,000) records were incorporated into the deployment process, the 
+deployment did not execute properly and left the application in a 
+non-recoverable state in Amazon's Elastic Beanstalk.  Fortunately, recovering 
+from such a state and in the context of this project was a straight-forward 
+process requiring re-setting some Elastic Beanstalk settings, removing the 
+application from Elastic Beanstalk and re-deploying to a newly created 
+application environment on Elastic Beanstalk.  However, this meant figuring 
+how to deploy the initial data sets since they still needed to be 
+incorporated into the live application.  
 
 Elastic Beanstalk also provides remote database access to backend database 
 servers being used as part of web applications like this one.  Consequently, 
@@ -469,10 +470,10 @@ faster method than the application deployment method.
 
 Finally, as of the completion of this paper the total costs incurred on 
 Amazon's Elastic Beanstalk, which includes the deployed web application 
-and Amazon S3 Bucket for storing static files and a PostgresQL database server 
-with initial data import, and a few web requests to confirm the application is 
-running amount to just under five dollars.  The web application can be 
-reviewed by opening a web browser to www.earthapi.net.
+and Amazon S3 Bucket for storing static files and a PostgresQL database 
+server with initial data import, and a few web requests to confirm the 
+application is running amount to just under five dollars.  The web 
+application can be reviewed by opening a web browser to www.earthapi.net.
 
 \begin{acks}
 The authors would like to thank Dr.~Gregor~von~Laszewski for his support 
@@ -483,8 +484,8 @@ the SRER website.  Craig Wissler of the University of Arizona's School of
 Natural Resources and The Environment for providing feedback on related to the 
 SRER data.  Dr.~David~Goodrich and Dr.~Phil~Heilman, both from the United 
 States Deparment of Agriculture's Southwest Watershed Research Center, for 
-providing support and access to the Walnut Gulch Experimental Watershed website 
-and data.
+providing support and access to the Walnut Gulch Experimental Watershed 
+website and data.
 \end{acks}
 
 \bibliographystyle{ACM-Reference-Format}
