@@ -1,0 +1,5 @@
+POSTGRES_DB=<enter a database name>
+POSTGRES_USER=<enter a database user name>
+POSTGRES_PASSWORD=<enter a database user password>
+POSTGRES_HOST=<enter the docker compose host for the database server>
+POSTGRES_PORT=5432

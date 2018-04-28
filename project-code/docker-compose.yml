@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+    db:
+        build:
+            context: .
+            dockerfile: Dockerfile.pgsql
+        image: acatejr/eapidb
+        env_file: ./.env
+        volumes:
+          - ./pgdata:/var/lib/postgresql/data
+            
+    app:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        env_file: ./.env
+        depends_on:
+            - db
+        image: acatejr/eapiapp
+        volumes:
+            - ./:/opt/app
+        command: /bin/bash
+        stdin_open: true
+        tty: true
+        links:
+            - db
+        ports:
+          - 8000:8000
