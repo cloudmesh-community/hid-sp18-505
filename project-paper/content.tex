@@ -378,7 +378,7 @@ deployment.
 
 However, most web applications rely on a backend database server like 
 PostgreSql or MySQL.  Amazon offers database servers throught its 
-Relational Database Service (RDS)~\cite{RDS2018}.  The application's 
+Relational Database Service (RDS)\cite{RDS2018}.  The application's 
 database is created after the application is initialized and after EB knows 
 about the application.  The database is added as a RDS component to the EB 
 application via online configuration.  Once RDS is configured for the 
@@ -395,7 +395,7 @@ seperately by a separate serve for security and efficiency reasons.  However,
 dealing with that type of deployment can require quite a bit of time and 
 increases complexity.  EB has an elegant solution for this.  A web 
 application, once configured and initialized is automatically provide and 
-Amazon S3 Bucket~\cite{S3Bucket2018}.  Amazon EB, automatically creates a 
+Amazon S3 Bucket\cite{S3Bucket2018}.  Amazon EB, automatically creates a 
 storage location for the application's static files, copies those files when 
 needed, to the storage location and serves those files for the web 
 application.  Typically, in a non-EB environment that is work the programmer 
@@ -406,7 +406,7 @@ has to develop and maintain.
 \subsection{REST and GraphQL}
 The load tests cited earlier in the paper that the application's REST services 
 tended to handle requests better than the GraphQL services.  However, the 
-Vazquez-Ingelmo, Cruz-Benito, Garcia-Palvo~\cite{hid505Vzquez2017} research 
+Vazquez-Ingelmo, Cruz-Benito, Garcia-Palvo\cite{hid505Vzquez2017} research 
 demonstrates that GraphQL can produce improve request-response rates than 
 REST.  Overall, there are many things to consider when deciding to pick 
 between the two web-service methods.  Once possible consideration is caching.  
@@ -416,7 +416,7 @@ may be easier to implement caching when needed for larger-scaled web-APIs.
 \subsection{Cloud Deployment}
 There were multiple reasons for chosing Amazon's Elastic Beanstalk as the 
 deployment platform for the live version of the application.  The possible 
-deployment platforms to chose from where Heroku~\cite{Heroku2018} and, as 
+deployment platforms to chose from where Heroku\cite{Heroku2018} and, as 
 mentioned Amazon's Elastic Beanstalk.  Heroku offers a simplified deployment 
 environment that, as long as the project structure complies with one of the 
 Heroku prescribed project structures, makes deployment a very simple process.  
