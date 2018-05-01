@@ -132,7 +132,7 @@ services.
 \section{Data Collection}
 
 Data were collected from the Santa Rita Experimental Range website.  In 
-figure Figure~\ref{f:srer_landing_page}, we see the present day landing 
+Figure~\ref{f:srer_landing_page}, we see the present day landing 
 page for SRER.  What is not apparent in the landing page is the 
 plethora of data available data available in the site.
 
@@ -142,7 +142,7 @@ plethora of data available data available in the site.
 \end{figure}
 
 
-In figure~\ref{f:srerprecipdata} we have navigated one page deeper into 
+In Figure~\ref{f:srerprecipdata} we have navigated one page deeper into 
 the SRER site and as can be seen, meta-data and data are both availabe, but as 
 raw text files.  These data are consumable as is, but could be enhanced by 
 being made machine readible by creating web services to deliver the data.
@@ -187,7 +187,7 @@ simple web API application was established using the following software:
 \subsection{REST/Swagger API}
 Generally, a REST based API endpoints, in combination with a tool like Swagger 
 are combined to create a web interface like the one shown in 
-figure~\ref{f:rest_swagger_ui}.  The figure provides an example of the various 
+Figure~\ref{f:rest_swagger_ui}.  The figure provides an example of the various 
 API endpoints (e.g., /api/srer/v1.0/precipevents).  Some endpoints require 
 input parameters which are used to execute parameterized queries (e.g., 
 queries that filter data) data, while other endpoints require no parameters 
@@ -198,10 +198,10 @@ and typically return a list of data entities.
   \caption{REST/Swagger UI}\label{f:rest_swagger_ui}
 \end{figure}
 
-In figure~\ref{f:srer_rest_raingage_list} we see an example of a REST 
+In Figure~\ref{f:srer_rest_raingage_list} we see an example of a REST 
 request's response and the resulting JSON data packet.  The JSON request is 
 relatively clear.  Based on the request url in 
-figure~\ref{f:srer_rest_raingage_list} we know the domain name (localhost), 
+Figure~\ref{f:srer_rest_raingage_list} we know the domain name (localhost), 
 API context (srer), API version number (v1.0) and the data being requested 
 (raingages).  However, in a REST API unless well documented by the developers, 
 developing properly formated parameterized request urls can be challenging.  
@@ -210,7 +210,7 @@ UI for the API and making sure proper documentation is added, so the end-user
 has as much information as possible.
 
 The JSON response is a bit more intuitive.  From firgure 
-figure~\ref{f:srer_rest_raingage_list} we can see the basic data structure and 
+Figure~\ref{f:srer_rest_raingage_list} we can see the basic data structure and 
 data types.  There are many programming libraries that automate the parsing of 
 JSON data into domain objects that facilitate API client development.
 
@@ -309,7 +309,7 @@ per second, for 10 minutes.  The Python load testing tool, Locust, was used
 to run each test under the described parameters and the web interface in 
 Locust provided summy graphics showing the results of the test.
 
-Figure~\ref{f:f:graphql_requests} and figure~\ref{f:graphql_response} 
+Figure~\ref{f:f:graphql_requests} and Figure~\ref{f:graphql_response} 
 demonstrate simple load-tests run against the GraphQL API developed for this 
 project.
 
@@ -325,7 +325,7 @@ project.
   \caption{GraphQL Average Response Time}\label{f:graphql_response}
 \end{figure}
 
-Figure~\ref{f:rest_requests} and figure~\ref{f:rest_response} show the results 
+Figure~\ref{f:rest_requests} and Figure~\ref{f:rest_response} show the results 
 of the same test run against the REST API for the web application.
 
 \begin{figure}[htb]
