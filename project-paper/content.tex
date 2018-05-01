@@ -267,16 +267,34 @@ is important to validate the benefit of new tools by developing comparisons
 and measures against existing tools in order to assess qualitative attributes 
 based on observed data and analysis.
 
-Figures~\ref{f:comparison-table} 
-and~\ref{f:comparison-graph}\cite{hid505Vzquez2017} demonstrate performance 
-metrics and analysis based on their research.  Their results indicate that 
-GraphQL may have better performance rates.
+Table~\ref{T:elements} 
+and Figure~\ref{f:comparison-graph}\cite{hid505Vazquez2017} demonstrate 
+performance metrics and analysis based on their research.  Their results 
+indicate that GraphQL may have better performance rates.
 
-\begin{figure}[htb]
-  \centering\includegraphics[width=\columnwidth]
-  {./images/network-response-times-table.png}
-  \caption{GraphQL/REST Comparision}\label{f:comparison-table}
-\end{figure}
+\begin{table}[htb]
+  \caption{Vazquez Research Findings}\cite{hid505Vazquez2017}\label{T:elements}
+  \bigskip
+  \begin{center}
+    \begin{tabular}{ c c c }
+      & REST API & GraphQL API \\
+    \toprule
+    Total Request Size & 26.66 KB & 13.90 KB \\
+    Request 1 & 6.54s & 3.85s \\
+    Request 2 & 7.45s & 4.17s \\
+    Request 3 & 5.82s & 4.64s \\
+    Request 4 & 5.50s & 3.90s \\
+    Request 5 & 6.14s & 4.95s \\
+    Request 6 & 5.26s & 4.16s \\
+    Request 7 & 5.79s & 4.11s \\
+    Request 8 & 5.94s & 3.97s \\
+    Request 9 & 7.06s & 3.79s \\
+    Request 10 & 5.99s & 3.77s \\
+    Avg network response time & 6.15s & 4.16s \\
+    \bottomrule
+   \end{tabular}
+  \end{center}
+\end{table}
 
 \begin{figure}[htb]
   \centering\includegraphics[width=\columnwidth]
@@ -315,7 +333,7 @@ project.
 
 \begin{figure}[htb]
   \centering\includegraphics[width=\columnwidth]
-  {./images/graphql_requests.png}
+  {./images/graphql_requests.jpg}
   \caption{GraphQL Total Requests per Second}\label{f:graphql_requests}
 \end{figure}
 
