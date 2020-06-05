@@ -8,7 +8,7 @@ chardet==3.0.4
 colorama==0.3.7
 coreapi==2.3.3
 coreschema==0.0.4
-Django==2.0.4
+Django==2.2.13
 django-extensions==2.0.7
 django-filter==1.1.0
 django-filters==0.2.1
