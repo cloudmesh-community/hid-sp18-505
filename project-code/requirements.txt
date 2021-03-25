@@ -34,7 +34,7 @@ psycopg2-binary==2.7.4
 python-dateutil==2.6.1
 python-dotenv==0.8.2
 pytz==2018.4
-PyYAML==3.12
+PyYAML==5.4
 requests==2.18.4
 Rx==1.6.1
 semantic-version==2.5.0
